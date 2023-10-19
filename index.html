@@ -1,129 +1,119 @@
 <html>
-    <head>
-    
-        <link rel="stylesheet" href="style.css">
-        <title>smoke animation</title>
-        <style type="text/css">
-            body{
-                background: black;
-                
-            }
-            section{
-                height: 100vh;
-            }
-            video{
-                object-fit: cover;
-                margin-left: 20px;
-            }
-            h1{
-                position: absolute;
-                top: 35%;
-                left: 20%;
-                color: #f80202;
-                font-family: terminator;
-                font-size: 5em;
-                letter-spacing: 0.2em;
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>smoke animation</title>
+    <style type="text/css">
+      body {
+        background: black;
+      }
+      section {
+        height: 100vh;
+      }
+      video {
+        object-fit: cover;
+        margin-left: 20px;
+      }
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        color: #ffffff;
+        font-family: terminator;
+        font-size: 5em;
+        letter-spacing: 0.2em;
+      }
+      h1 span {
+        opacity: 0;
+        display: inline-block;
+        animation: sebastien 1s linear forwards;
+      }
+      @keyframes sebastien {
+        0% {
+          opacity: 0;
+          transform: rotateY(90deg);
+          filter: blur(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: rotateY(0deg);
+          filter: blur(0);
+        }
+      }
+      h1 span:nth-child(1) {
+        animation-delay: 1s;
+      }
 
-            }
-            h1 span{
-                opacity: 0;
-                display: inline-block;
-                animation: sebastien 1s linear forwards;
+      h1 span:nth-child(2) {
+        animation-delay: 1.2s;
+      }
 
-            }
-            @keyframes sebastien
-             {
-                0%{
-                    opacity: 0;
-                    transform: rotateY(90deg);
-                    filter: blur(10px);
-                }
-                100%{
-                    opacity: 1;
-                    transform: rotateY(0deg);
-                    filter: blur(0);
-                }
-            }
-            h1 span:nth-child(1){
-                animation-delay: 1s;
-            }
-        
-            h1 span:nth-child(2){
-                animation-delay: 1.2s;
-            }
-        
-            h1 span:nth-child(3){
-                animation-delay: 1.4s;
-            }
-        
-            h1 span:nth-child(4){
-                animation-delay: 1.6s;
-            }
-        
-            h1 span:nth-child(5){
-                animation-delay: 1.8s;
-            }
-        
-            h1 span:nth-child(6){
-                animation-delay: 2s;
-            }
-        
-            h1 span:nth-child(7){
-                animation-delay: 2.5s;
-            }
-        
-            h1 span:nth-child(8){
-                animation-delay: 2.8s;
-            }
-        
-            h1 span:nth-child(9){
-                animation-delay: 2.9s;
-            }
-            h1 span:nth-child(10){
-                animation-delay: 3s;
-            }
-        
-            h1 span:nth-child(11){
-                animation-delay: 3.5s;
-            }
-        
-            h1 span:nth-child(12){
-                animation-delay: 3.8s;
-            }
-            
-        </style>
-    </head>
-    <body>
-        <button>
-            Button
-          </button>
-          <button>
-            Button
-          </button>
-          <button>
-            Button
-          </button>
-          <button>
-            Button
-          </button>
-       
-        <section>
-            <video src="smoke.mp4" autoplay muted></video>
-            <h1>
-                <span>P</span>
-                <span>R</span>
-                <span>E</span>
-                <span>F</span>
-                <span>O</span>
-                <span>R</span>
-                <span>M</span>
-                <span>A</span>
-                <span>T</span>
-                <span>I</span>
-                <span>O</span>
-                <span>N</span>
-            </h1>
-        </section>
-        
-    </body>
+      h1 span:nth-child(3) {
+        animation-delay: 1.4s;
+      }
+
+      h1 span:nth-child(4) {
+        animation-delay: 1.6s;
+      }
+
+      h1 span:nth-child(5) {
+        animation-delay: 1.8s;
+      }
+
+      h1 span:nth-child(6) {
+        animation-delay: 2s;
+      }
+
+      h1 span:nth-child(7) {
+        animation-delay: 2.5s;
+      }
+
+      h1 span:nth-child(8) {
+        animation-delay: 2.8s;
+      }
+
+      h1 span:nth-child(9) {
+        animation-delay: 2.9s;
+      }
+      h1 span:nth-child(10) {
+        animation-delay: 3s;
+      }
+
+      h1 span:nth-child(11) {
+        animation-delay: 3.5s;
+      }
+
+      h1 span:nth-child(12) {
+        animation-delay: 3.8s;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="../">Acceuil</a>
+      <a href="entreprise/interview">interview</a>
+      <a href="expo/expo.html">expo</a>
+    </nav>
+    <section>
+      <video src="smoke.mp4" autoplay muted></video>
+      <h1>
+        <span>P</span>
+        <span>R</span>
+        <span>E</span>
+        <span>F</span>
+        <span>O</span>
+        <span>R</span>
+        <span>M</span>
+        <span>A</span>
+        <span>T</span>
+        <span>I</span>
+        <span>O</span>
+        <span>N</span>
+      </h1>
+    </section>
+    <footer>
+      <p>
+        Copyright &copy;2023 - <a href="http://cf2m.be" target="_blank">cf2m</a>
+      </p>
+    </footer>
+  </body>
 </html>
