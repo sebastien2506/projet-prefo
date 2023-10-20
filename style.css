@@ -1,39 +1,51 @@
 /* le bouton navbar*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 nav {
   display: flex;
   justify-content: end;
   padding-right: 60px;
-  padding-top: 20px;
+  height: 7vh;
+  background-color: rgb(26, 26, 26);
+  border-bottom: 2px solid red;
 }
-
+/*    Cela concerne tout les balise html <a> qui se situe dans la balise <nav>   */
 nav > a {
+  color: white;
+  padding-top: 2vh;
   margin: 0px 10px 0px 40px;
-  font-size: 24px;
-  color: #e1e1e1;
-  font-family: inherit;
-  font-weight: 800;
-  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: bold;
   position: relative;
-  border: none;
   text-decoration: none;
-  background: none;
   text-transform: uppercase;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: color;
 }
 
+/*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
 nav > a:focus,
 nav > a:hover {
-  color: #fff;
+  color: #ff0000;
 }
 
+/*
+Lorsque l'on met notre souris sur les balises <a> , l'element after est changé.
+On change le width et la position left de l'element after
+*/
 nav > a:focus:after,
 nav > a:hover:after {
   width: 100%;
   left: 0%;
 }
-
+/*   Cela concerne tout les balise html <a> qui se situe dans la balise <nav> 
+     Le after qant a lui signifie qu'il ajoute un element virtuel , une fausse balise après chaque <a>
+     Donc c'est un element html qui ne figure par dans le fichier html
+*/
 nav > a:after {
   content: "";
   pointer-events: none;
@@ -43,13 +55,13 @@ nav > a:after {
   width: 0%;
   height: 2px;
   background-color: #fff;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 1, 1);
+  transition-duration: 0.8s;
   transition-property: width, left;
 }
 
 /*rotation Preformation*/
-body {
+#index {
   background: black;
 }
 section {
@@ -71,7 +83,7 @@ video {
   position: absolute;
   top: 50%;
   left: 20%;
-  color: #ffffff;
+  color: #f50505;
   font-family: terminator;
   font-size: 5em;
   letter-spacing: 0.2em;
@@ -151,4 +163,46 @@ video {
 
 #animation span:nth-child(12) {
   animation-delay: 3.8s;
+}
+
+/* fond decran expo*/
+main {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("file:///D:/projet%20prefo/image%20video/a.jpg");
+  background-size: cover;
+}
+.text {
+  font-size: 1.6rem;
+  width: 50vw;
+  margin: auto;
+  padding: 10px;
+  background-color: rgba(22, 22, 22, 0.85);
+  color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+.titre {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+#asterix {
+  color: aqua;
+  cursor: pointer;
+  position: relative;
+}
+#asterix:hover::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-image: url("file:///D:/projet%20prefo/image%20video/8835.jpg");
+  background-size: cover;
+  width: 15vw;
+  height: 20vw;
+  top: -45vh;
+  left: -10vh;
+  border: 1px solid black;
+  border-radius: 10px;
 }
