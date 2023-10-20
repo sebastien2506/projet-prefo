@@ -1,30 +1,35 @@
-/* le bouton navbar*/
+/* -----------------------------------------------------------------------------le bouton navbar-----------------------------------------------------------------------------*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /*La propriété margin définit la taille des marges sur les quatre côtés de l'élément. C'est une propriété raccourcie qui permet de manipuler les autres propriétés de marges : margin-top, margin-right, margin-bottom et margin-left. */
+  padding: 0;/*La propriété padding est une propriété raccourcie qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. les boîtes CSS). Elle synthétise padding-top, padding-right, padding-bottom, padding-left.*/
+  box-sizing: border-box;/*La propriété CSS box-sizing définit la façon dont la hauteur et la largeur totale d'un élément est calculée (avec le modèle de boîte CSS).*/
 }
 nav {
-  display: flex;
-  justify-content: end;
-  padding-right: 60px;
-  height: 7vh;
-  background-color: rgb(26, 26, 26);
-  border-bottom: 2px solid red;
+  display: flex;/*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
+
+                   Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
+  
+                   Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
+  justify-content: end;/*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
+  padding-right: 60px;/*La propriété padding-right d'un élément correspond à l'espace nécessaire à la droite d'un élément. La zone de remplissage correspond à l'espace entre le contenu et la bordure. padding-right ne peut pas recevoir de valeurs négatives.*/
+  height: 7vh; /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
+  background-color: rgb(26, 26, 26); /*couleur de fond d'ecran */
+  border-bottom: 2px solid red; /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
+  
 }
-/*    Cela concerne tout les balise html <a> qui se situe dans la balise <nav>   */
+/*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
 nav > a {
   color: white;
   padding-top: 2vh;
   margin: 0px 10px 0px 40px;
-  font-size: 1.6rem;
-  font-weight: bold;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
+  font-size: 1.6rem;/*La propriété font-size définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type <length>) (par exemple exprimées avec les unités em ou ex).*/
+  font-weight: bold; /*La propriété CSS font-weight permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. font-family). Certaines fontes n'existent qu'avec les niveaux de graisses normal et bold.*/
+  position: relative; /*La propriété CSS position définit la façon dont un élément est positionné dans un document. Les propriétés top, right, bottom et left déterminent l'emplacement final de l'élément positionné.*/
+  text-decoration: none; /*La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une propriété raccourcie qui permet de paramétrer simultanément les propriétés « détaillées » : text-decoration-line, text-decoration-color et text-decoration-style.*/
+  text-transform: uppercase; /*La propriété text-transform définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations Ruby.*/
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); /*La propriété transition-timing-function décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un effet de transition sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.*/
+  transition-duration: 400ms; /*La propriété transition-duration définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, 0s, indique qu'il n'y aura aucune animation.*/
+  transition-property: color; /*La propriété transition-property désigne les noms des propriétés CSS sur lesquelles un effet de transition devrait être appliqué.*/
 }
 
 /*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
@@ -59,8 +64,8 @@ nav > a:after {
   transition-duration: 0.8s;
   transition-property: width, left;
 }
-
-/*rotation Preformation*/
+/*-------------------------------------------------------------------------------------end navbar------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------rotation Preformation-------------------------------------------------------------------------*/
 #index {
   background: black;
 }
@@ -164,30 +169,42 @@ video {
 #animation span:nth-child(12) {
   animation-delay: 3.8s;
 }
+/*---------------------------------------------------------------------------------fin rotation lettre preformation----------------------------------------------------------*/
 
-/* fond decran expo*/
+/*-------------------------------------------------------------------------------------- fond du text------------------------------------------------------------------------*/
 main {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background-image: url("image\ video/a.jpg");
   background-size: cover;
 }
 .text {
   font-size: 1.6rem;
-  width: 50vw;
+  width: 29vw;
   margin: auto;
   padding: 10px;
-  background-color: rgba(22, 22, 22, 0.85);
+  background-color: rgba(22, 22, 22, 0.93);
   color: white;
   border: 1px solid black;
   border-radius: 25px;
 }
 .titre {
   text-align: center;
-  margin-bottom: 30px;
-  padding-top: 30px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  background-color: rgba(22, 22, 22, 0.95);
+  color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+  font-size: 1.6rem;
+  width: 19vw;
+  margin: auto;
+  padding: 10px;
+
 }
 
+
+/*--------------------------------------------(hover before)faire apparaitre des photo sur des mots text----------------------------------------------------------------*/
 #asterix {
   color: aqua;
   cursor: pointer;
@@ -213,3 +230,187 @@ main {
   border: 1px solid black;
   border-radius: 10px;
 }
+
+#manette{
+  color: aqua;
+  cursor: pointer;
+  position: relative;
+}
+
+#manette:hover::before{
+  display: inline-block;
+}
+#manette::before{
+  content:"";
+  display: none;
+  position: absolute;
+  background-image: url(image\ video/mannes.gif);
+  background-size: cover;
+  width: 25vw;
+  height: 20vw;
+  top: -45vh;
+  left: -10vh;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+#manneq{
+  color: aqua;
+  cursor: pointer;
+  position: relative;
+}
+
+#manneq:hover::before{
+  display: inline-block;
+}
+#manneq::before{
+  content:"";
+  display: none;
+  position: absolute;
+  background-image: url(image\ video/manq.jpg);
+  background-size: cover;
+  width: 25vw;
+  height: 25vw;
+  top: -30vh;
+  left: -15vh;
+  border: 1px solid black;
+  border-radius: 10px;
+  }
+
+  #noel{
+    color: aqua;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  #noel:hover::before{
+    display: inline-block;
+  }
+  #noel::before{
+    content:"";
+    display: none;
+    position: absolute;
+    background-image: url(image\ video/sega.jpg);
+    background-size: cover;
+    width: 25vw;
+    height: 20vw;
+    top: -45vh;
+    left: -10vh;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  #nes{
+    color: aqua;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  #nes:hover::before{
+    display: inline-block;
+  }
+  #nes::before{
+    content:"";
+    display: none;
+    position: absolute;
+    background-image: url(image\ video/nes.jpg);
+    background-size: cover;
+    width: 25vw;
+    height: 20vw;
+    top: -45vh;
+    left: -10vh;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  #boy{
+    color: aqua;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  #boy:hover::before{
+    display: inline-block;
+  }
+  #boy::before{
+    content:"";
+    display: none;
+    position: absolute;
+    background-image: url(image\ video/boy.jpg);
+    background-size: cover;
+    width: 25vw;
+    height: 20vw;
+    top: -45vh;
+    left: -10vh;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  #kid{
+    color: aqua;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  #kid:hover::before{
+    display: inline-block;
+  }
+  #kid::before{
+    content:"";
+    display: none;
+    position: absolute;
+    background-image: url(image\ video/kid.jpg);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 20vw;
+    top: -45vh;
+    left: -10vh;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  #cousin{
+    color: aqua;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  #cousin:hover::before{
+    display: inline-block;
+  }
+  #cousin::before{
+    content:"";
+    display: none;
+    position: absolute;
+    background-image: url(image\ video/cousin.jpg);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 20vw;
+    top: -45vh;
+    left: -10vh;
+    border: 1px solid black;
+    border-radius: 20px;
+   
+  
+  }
+  #pc{
+    color: aqua;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  #pc:hover::before{
+    display: inline-block;
+  }
+  #pc::before{
+    content:"";
+    display: none;
+    position: absolute;
+    background-image: url(image\ video/1epc.jpg);
+    background-size: cover;
+    width: 25vw;
+    height: 20vw;
+    top: -45vh;
+    left: -10vh;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
