@@ -193,9 +193,13 @@ main {
   cursor: pointer;
   position: relative;
 }
+/*Lorsque l'on met notre souris sur le mot asterix , on rend visible le pseudo element before*/
 #asterix:hover::before {
   display: inline-block;
 }
+/*On crée le pseudo element before qui est lié a asterix
+  On le met en display none afin qu'il ne sois pas visible
+*/
 #asterix::before {
   content: "";
   display: none;
