@@ -169,7 +169,7 @@ video {
 main {
   width: 100vw;
   height: 100vh;
-  background-image: url("file:///D:/projet%20prefo/image%20video/a.jpg");
+  background-image: url("image\ video/a.jpg");
   background-size: cover;
 }
 .text {
@@ -197,7 +197,7 @@ main {
   content: "";
   display: inline-block;
   position: absolute;
-  background-image: url("file:///D:/projet%20prefo/image%20video/8835.jpg");
+  background-image: url("image\ video/8835.jpg");
   background-size: cover;
   width: 15vw;
   height: 20vw;
