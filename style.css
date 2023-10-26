@@ -4,7 +4,35 @@
   padding: 0;/*La propriété padding est une propriété raccourcie qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. les boîtes CSS). Elle synthétise padding-top, padding-right, padding-bottom, padding-left.*/
   box-sizing: border-box;/*La propriété CSS box-sizing définit la façon dont la hauteur et la largeur totale d'un élément est calculée (avec le modèle de boîte CSS).*/
 }
+
+body{
+  overflow-x: hidden;
+}
+
+
+
+main{
+  margin-top: 8vh;
+}
+
+#style{
+  position: fixed;
+  background-image: url(/image\ video/code3.jpg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.05;
+  z-index: 2;
+}
+
 nav {
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  top: 0;
   display: flex;/*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
 
                    Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
@@ -52,19 +80,30 @@ nav > a:hover:after {
      Donc c'est un element html qui ne figure par dans le fichier html
 */
 nav > a:after {
+  /* Sélecteur pour les pseudo-éléments ::after des balises <a> enfants directs de l'élément <nav> */
   content: "";
+  /* Ajoute un contenu vide */
   pointer-events: none;
+  /* Désactive les événements de pointeur pour cet élément, ce qui permettra de cliquer à travers lui */
   bottom: -2px;
+  /* Positionne le bas de l'élément 2 pixels au-dessous de sa position normale */
   left: 50%;
+  /* Positionne la gauche de l'élément au centre de son conteneur parent */
   position: absolute;
+  /* Positionne l'élément de façon absolue par rapport à son conteneur parent */
   width: 0%;
+  /* Initialise la largeur de l'élément à 0 */
   height: 2px;
+  /* Définit la hauteur de l'élément à 2 pixels */
   background-color: #fff;
+  /* Définit la couleur d'arrière-plan en blanc */
   transition-timing-function: cubic-bezier(0.25, 0.8, 1, 1);
+  /* Définit la fonction de temporisation pour les transitions (effet d'accélération personnalisé) */
   transition-duration: 0.8s;
+  /* Définit la durée de la transition à 0.8 seconde */
   transition-property: width, left;
+  /* Spécifie les propriétés CSS qui seront animées lors de la transition */
 }
-
 h5{
   color: #fff;
   font-size: 50px;
@@ -73,74 +112,137 @@ h5{
 /*-------------------------------------------------------------------------------------end navbar------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------rotation Preformation-------------------------------------------------------------------------*/
 #index {
+  /* Sélecteur pour l'élément avec l'ID "index" */
   background: black;
+  /* Définit la couleur d'arrière-plan en noir */
 }
-section {
-  height: 100vh;
-}
-video {
-  height: 100vh;
-  width: 100vw;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  object-fit: cover;
-  margin-left: 20px;
-}
-#mainTitle {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  text-align: center;
-  color: rgb(224, 3, 3);
-  animation: projet 4s alternate forwards;
-}
-#animation {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  color: #f50505;
-  font-family: terminator;
-  font-size: 5em;
-  letter-spacing: 0.2em;
-}
-#animation span {
-  opacity: 0;
-  display: inline-block;
-  animation: sebastien 1s linear forwards;
-}
-@keyframes projet {
-  0% {
-    opacity: 0;
-    font-size: 0;
-  }
 
+#animation_section {
+  /* Sélecteur pour l'élément avec l'ID "animation_section" */
+  height: 100vh;
+  /* Définit la hauteur à 100% de la hauteur de la vue */
+}
+
+
+video {
+  /* Sélecteur pour tous les éléments vidéo */
+  height: 100vh;
+  /* Définit la hauteur à 100% de la hauteur de la vue */
+  width: 100vw;
+  /* Définit la largeur à 100% de la largeur de la vue */
+  left: 0;
+  /* Place l'élément au bord gauche de son conteneur parent */
+  right: 0;
+  /* Place l'élément au bord droit de son conteneur parent */
+  top: 0;
+  /* Place l'élément au bord supérieur de son conteneur parent */
+  bottom: 0;
+  /* Place l'élément au bord inférieur de son conteneur parent */
+  object-fit: cover;
+  /* Ajuste la taille de l'objet vidéo pour couvrir complètement l'élément */
+  margin-left: 20px;
+  /* Ajoute une marge de 20 pixels à gauche de l'élément */
+  z-index: 1;
+}
+
+#mainTitle {
+  /* Sélecteur pour l'élément avec l'ID "mainTitle" */
+  position: absolute;
+  width: 100%;
+  /* Positionne l'élément de façon absolue par rapport à son conteneur parent */
+  top: 30%;
+  /* Positionne le haut de l'élément à 30% de la hauteur de son conteneur parent */
+  text-align: center;
+  font-size: 3rem;
+  /* Centre le texte horizontalement dans l'élément */
+  color: white;
+  /* Définit la couleur du texte en rouge foncé */
+  z-index: 3;
+}
+
+
+#mainTitle > h1 {
+  animation: projet 5.5s alternate forwards;
+  /* Applique l'animation "projet" sur l'élément pendant 4 secondes en mode alterné et la conserve à la fin */
+}
+
+#animation {
+  /* Sélecteur pour l'élément avec l'ID "animation" */
+  position: absolute;
+  /* Positionne l'élément de façon absolue par rapport à son conteneur parent */
+  top: 50%;
+  /* Positionne le haut de l'élément à 50% de la hauteur de son conteneur parent */
+  left: 20%;
+  /* Positionne la gauche de l'élément à 20% de la largeur de son conteneur parent */
+  color: #f50505;
+  /* Définit la couleur du texte en rouge clair */
+  font-family: terminator;
+  /* Définit la police du texte comme "terminator" */
+  font-size: 5em;
+  /* Définit la taille de la police à 5 fois la taille de la police par défaut */
+  letter-spacing: 0.2em;
+  /* Ajoute un espacement de 0.2 em entre les lettres du texte */
+  z-index: 3;
+}
+
+#animation span {
+  /* Sélecteur pour les éléments span à l'intérieur de l'élément avec l'ID "animation" */
+  opacity: 0;
+  /* Définit l'opacité à 0 (élément invisible) */
+  display: inline-block;
+  /* Affiche l'élément comme un bloc en ligne */
+  animation: sebastien 1s linear forwards;
+  /* Applique l'animation "sebastien" sur l'élément pendant 1 seconde en mode linéaire et la conserve à la fin */
+}
+
+@keyframes projet {
+  /* Définition d'une animation nommée "projet" */
+  0% {
+    /* Au début de l'animation */
+    opacity: 0;
+    /* L'élément est invisible */
+  }
+  40%{
+    opacity: 0;
+  }
   100% {
+    /* À la fin de l'animation */
     opacity: 1;
-    font-size: 5em;
-    transform: translate(-2.3em, -0.8em);
+    /* L'élément est complètement visible */
   }
 }
 
 @keyframes sebastien {
+  /* Définition d'une animation nommée "sebastien" */
   0% {
+    /* Au début de l'animation */
     opacity: 0;
+    /* L'élément est invisible */
     transform: rotateY(90deg);
+    /* Applique une rotation de 90 degrés autour de l'axe Y */
     filter: blur(10px);
+    /* Applique un flou de 10 pixels */
   }
   100% {
+    /* À la fin de l'animation */
     opacity: 1;
+    /* L'élément est complètement visible */
     transform: rotateY(0deg);
+    /* Rétablit la rotation à 0 degré */
     filter: blur(0);
+    /* Supprime le flou */
   }
 }
 #animation span:nth-child(1) {
+  /* Sélecteur pour le premier élément span à l'intérieur de l'élément avec l'ID "animation" */
   animation-delay: 1s;
+  /* Décale le démarrage de l'animation de 1 seconde après le début */
 }
 
 #animation span:nth-child(2) {
+  /* Sélecteur pour le deuxième élément span à l'intérieur de l'élément avec l'ID "animation" */
   animation-delay: 1.2s;
+  /* Décale le démarrage de l'animation de 1.2 secondes après le début */
 }
 
 #animation span:nth-child(3) {
@@ -184,247 +286,142 @@ video {
 /*---------------------------------------------------------------------------------fin rotation lettre preformation----------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------- fond du text------------------------------------------------------------------------*/
 #expo {
+  /* Sélecteur pour l'élément avec l'ID "expo" */
   width: 100vw;
+  /* Définit la largeur à 100% de la largeur de la vue */
   height: 120vh;
+  /* Définit la hauteur à 120% de la hauteur de la vue */
   background-image: url("image\ video/a.jpg");
+  /* Définit une image de fond depuis le chemin spécifié */
   background-size: cover;
-}
-.text {
-  font-size: 1.6rem;
-  width: 29vw;
-  margin: auto;
-  padding: 10px;
-  background-color: rgba(22, 22, 22, 0.93);
-  color: white;
-  border: 1px solid black;
-  border-radius: 25px;
-}
-.titre {
-  text-align: center;
-  margin-bottom: 5px;
-  padding-top: 20px;
-  background-color: rgba(22, 22, 22, 0.95);
-  color: white;
-  border: 1px solid black;
-  border-radius: 25px;
-  font-size: 1.6rem;
-  width: 19vw;
-  margin: auto;
-  padding: 10px;
+  /* Ajuste la taille de l'arrière-plan pour couvrir complètement l'élément */
+  background-position: center 7vh;
+  /* Positionne l'arrière-plan au centre de l'élément avec un décalage vertical de 7% de la hauteur de la vue */
+  background-repeat: no-repeat;
+  /* Empêche la répétition de l'arrière-plan */
 }
 
+.text {
+  /* Sélecteur pour les éléments avec la classe "text" */
+  font-size: 1.6rem;
+  /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
+  width: 30vw;
+  /* Définit la largeur à 50% de la largeur de la vue */
+  margin: auto;
+  /* Centre l'élément horizontalement dans son conteneur parent */
+  padding: 10px;
+  /* Ajoute un remplissage intérieur de 10 pixels */
+  background-color: rgba(22, 22, 22, 0.93);
+  /* Définit la couleur d'arrière-plan avec une opacité de 0.93 */
+  color: white;
+  /* Définit la couleur du texte à blanc */
+  border: 1px solid black;
+  /* Ajoute une bordure d'un pixel de large de couleur noire */
+  border-radius: 25px;
+  /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
+}
+
+.titre {
+  /* Sélecteur pour les éléments avec la classe "titre" */
+  margin: 0px auto 0px auto;
+  /* Centre l'élément horizontalement dans son conteneur parent et supprime la marge supérieure */
+  text-align: center;
+  /* Centre le texte horizontalement dans l'élément */
+  background-color: rgba(22, 22, 22, 0.95);
+  /* Définit la couleur d'arrière-plan avec une opacité de 0.95 */
+  color: white;
+  /* Définit la couleur du texte à blanc */
+  border: 1px solid black;
+  /* Ajoute une bordure d'un pixel de large de couleur noire */
+  border-radius: 25px;
+  /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
+  font-size: 1.6rem;
+  /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
+  width: 19vw;
+  /* Définit la largeur à 19% de la largeur de la vue */
+  padding: 10px;
+  /* Ajoute un remplissage intérieur de 10 pixels */
+}
 
 /*--------------------------------------------(hover before)faire apparaitre des photo sur des mots text----------------------------------------------------------------*/
-#asterix {
-  color: aqua;
-  cursor: pointer;
-  position: relative;
-}
-/*Lorsque l'on met notre souris sur le mot asterix , on rend visible le pseudo element before*/
-#asterix:hover::before {
-  display: inline-block;
-}
 /*On crée le pseudo element before qui est lié a asterix
   On le met en display none afin qu'il ne sois pas visible
 */
-#asterix::before {
-  content: "";
-  display: none;
-  position: absolute;
-  background-image: url("image\ video/8835.jpg");
-  background-size: cover;
-  width: 15vw;
-  height: 20vw;
-  top: -45vh;
-  left: -10vh;
-  border: 1px solid black;
-  border-radius: 10px;
+
+@keyframes bgSpanOpacity{
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
 }
 
-#manette{
-  color: aqua;
+.bgspan{
   cursor: pointer;
-  position: relative;
+  color: aqua;
 }
-
-#manette:hover::before{
+/*Lorsque l'on met notre souris sur le mot en question , on rend visible le pseudo element before*/
+.bgspan:hover::before{
   display: inline-block;
+  animation: bgSpanOpacity 1.8s;
+}
+.bgspan::before { /* Sélecteur ::before pour ajouter du contenu avant l'élément avec la classe .bgspan */
+  content: "";
+  /* Ajoute un contenu vide */
+  top: 20vh;
+  /* Positionne le haut de l'élément à 20% de la hauteur de la vue */
+  left: 9vw;
+  /* Positionne la gauche de l'élément à 9% de la largeur de la vue */
+  display: none;
+  /* Masque l'élément, il ne sera pas affiché */
+  position: fixed;
+  /* Positionne l'élément de façon fixe par rapport à la fenêtre du navigateur */
+  width: 15vw;
+  /* Définit la largeur de l'élément à 15% de la largeur de la vue */
+  height: 20vw;
+  /* Définit la hauteur de l'élément à 20% de la largeur de la vue */
+  border: 1px solid black;
+  /* Ajoute une bordure d'un pixel de large de couleur noire */
+  border-radius: 10px;
+  /* Arrondit les coins de l'élément avec un rayon de 10 pixels */
+  background-size: cover;
+  /* Ajuste la taille de l'arrière-plan pour couvrir complètement l'élément */
+  background-position: center;
+  /* Positionne l'arrière-plan au centre de l'élément */
+  box-shadow: 5px 5px 5px white;
+  /* Ajoute une ombre de 5 pixels de décalage à droite et en bas avec une couleur noire */
+}
+#asterix::before {
+  background-image: url(image\ video/8835.jpg);
 }
 #manette::before{
-  content:"";
-  display: none;
-  position: absolute;
   background-image: url(image\ video/mannes.gif);
-  background-size: cover;
-  width: 25vw;
-  height: 20vw;
-  top: -45vh;
-  left: -10vh;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-#manneq{
-  color: aqua;
-  cursor: pointer;
-  position: relative;
-}
-
-#manneq:hover::before{
-  display: inline-block;
 }
 #manneq::before{
-  content:"";
-  display: none;
-  position: absolute;
   background-image: url(image\ video/manq.jpg);
-  background-size: cover;
+}
+#noel::before{
+  background-image: url(image\ video/sega.jpg);
+}
+#nes::before{
+  background-image: url(image\ video/nes.jpg);
+}
+#boy::before{
+  background-image: url(image\ video/boy.jpg);
+}
+#kid::before{
+  background-image: url(image\ video/kid.jpg);
+}
+#cousin::before{
+  background-image: url(image\ video/cousin.jpg);
+}
+#pc::before{
+  left: 0vw;
   width: 25vw;
-  height: 25vw;
-  top: -30vh;
-  left: -15vh;
-  border: 1px solid black;
-  border-radius: 10px;
-  }
-
-  #noel{
-    color: aqua;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  #noel:hover::before{
-    display: inline-block;
-  }
-  #noel::before{
-    content:"";
-    display: none;
-    position: absolute;
-    background-image: url(image\ video/sega.jpg);
-    background-size: cover;
-    width: 25vw;
-    height: 20vw;
-    top: -45vh;
-    left: -10vh;
-    border: 1px solid black;
-    border-radius: 10px;
-  }
-
-  #nes{
-    color: aqua;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  #nes:hover::before{
-    display: inline-block;
-  }
-  #nes::before{
-    content:"";
-    display: none;
-    position: absolute;
-    background-image: url(image\ video/nes.jpg);
-    background-size: cover;
-    width: 25vw;
-    height: 20vw;
-    top: -45vh;
-    left: -10vh;
-    border: 1px solid black;
-    border-radius: 10px;
-  }
-  #boy{
-    color: aqua;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  #boy:hover::before{
-    display: inline-block;
-  }
-  #boy::before{
-    content:"";
-    display: none;
-    position: absolute;
-    background-image: url(image\ video/boy.jpg);
-    background-size: cover;
-    width: 25vw;
-    height: 20vw;
-    top: -45vh;
-    left: -10vh;
-    border: 1px solid black;
-    border-radius: 10px;
-  }
-
-  #kid{
-    color: aqua;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  #kid:hover::before{
-    display: inline-block;
-  }
-  #kid::before{
-    content:"";
-    display: none;
-    position: absolute;
-    background-image: url(image\ video/kid.jpg);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    width: 25vw;
-    height: 20vw;
-    top: -45vh;
-    left: -10vh;
-    border: 1px solid black;
-    border-radius: 10px;
-  }
-  #cousin{
-    color: aqua;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  #cousin:hover::before{
-    display: inline-block;
-  }
-  #cousin::before{
-    content:"";
-    display: none;
-    position: absolute;
-    background-image: url(image\ video/cousin.jpg);
-    background-size: 65%;
-    background-repeat: no-repeat;
-    width: 25vw;
-    height: 20vw;
-    top: -45vh;
-    left: -10vh;
-    border: 1px solid black;
-    border-radius: 20px;
-   
-  
-  }
-  #pc{
-    color: aqua;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  #pc:hover::before{
-    display: inline-block;
-  }
-  #pc::before{
-    content:"";
-    display: none;
-    position: absolute;
-    background-image: url(image\ video/1epc.jpg);
-    background-size: 60%;
-    background-repeat: no-repeat;
-    width: 25vw;
-    height: 20vw;
-    top: -45vh;
-    left: -10vh;
-    border: 1px solid black;
-    border-radius: 10px;
-  }
+  background-image: url(image\ video/1epc.jpg);
+}
 
 /*---------------------------------------------------------------------------galerie photo---------------------------------------------------------------------------------*/
 #pic{
