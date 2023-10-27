@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Marck+Script&family=Open+Sans:ital,wght@1,700&family=Poppins:ital,wght@1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
 
+/*----------------------------------css interview-------------------*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'open sans', sans-serif;
+    font-family: 'open sans';
 }
 
 nav {
-    font-family: sans-serif;
     display: flex;
     /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
   
@@ -21,9 +22,9 @@ nav {
     /*La propriété padding-right d'un élément correspond à l'espace nécessaire à la droite d'un élément. La zone de remplissage correspond à l'espace entre le contenu et la bordure. padding-right ne peut pas recevoir de valeurs négatives.*/
     height: 7vh;
     /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(2, 67, 5);
     /*couleur de fond d'ecran */
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid rgb(73, 245, 16);
     /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
 
 
@@ -57,7 +58,7 @@ nav>a {
 /*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
 nav>a:focus,
 nav>a:hover {
-    color: #ff0000;
+    color: #85db04;
 }
 
 /*
@@ -311,7 +312,7 @@ nav > a:after {
     /* Position relative pour ".block" */
     position: relative;    
     /* Largeur de 190% par rapport à son conteneur */
-    width: 190%;    
+    width: 100%;    
     /* Utilisation de flexbox pour centrer les éléments enfants horizontalement et verticalement */
     display: flex;
     justify-content: center;
@@ -468,7 +469,7 @@ nav > a:after {
     /* Taille de police de 0.8em */
     font-size: 0.8em;   
     /* Couleur du texte en gris foncé (#555) */
-    color: #555;
+    color: #b6df31;
 }
 
 /* Styles pour ".chatbox" */
@@ -501,7 +502,7 @@ nav > a:after {
     /* Position relative pour ".message p" */
     position: relative;
     /* Alignement du texte à droite */
-    text-align: right;   
+    text-align: left;   
     /* Largeur maximale de 65% par rapport à son conteneur */
     max-width: 65%;   
     /* Rembourrage de 15px autour du texte */
@@ -538,6 +539,7 @@ nav > a:after {
     font-size: 0.85em;   
     /* Opacité de 0.5 pour rendre le texte partiellement transparent */
     opacity: 0.5;
+    text-align: right;
 }
 
 
@@ -558,7 +560,7 @@ nav > a:after {
     /* Couleur de fond blanche (#ffffff) pour les messages de l'ami */
     background: #ffffff;
     /* Texte aligné à droite à l'intérieur des messages de l'ami */
-    text-align: right;
+    text-align: left;
 }
 
 /* Styles pour les pseudo-éléments "::before" à l'intérieur de ".frnd_message p" */

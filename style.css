@@ -5,19 +5,105 @@
   box-sizing: border-box;/*La propriété CSS box-sizing définit la façon dont la hauteur et la largeur totale d'un élément est calculée (avec le modèle de boîte CSS).*/
 }
 
-body{
-  overflow-x: hidden;
+body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+}
+/*--------------------------------------------------------------------------------------card rota--------------------------------------------------------------------------------*/
+.card {
+  position: relative;
+  width: 500px;
+  height: 550px;
+  margin: 50px;
+  top: -150px;
 }
 
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 1.9s;
+}
 
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
 
+.card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+.card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0,0,0,.4);
+  text-align: center;
+}
+
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(3, 35, 54);
+  padding: 15px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+  font-size: 2em;
+}
+
+.card .back .link {
+  border-top: solid 1px #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+
+.card .back .link a {
+  color: #f3f3f3;
+}
+
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  letter-spacing: 1px;
+} 
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+/*---------------------------------fin card----------------*/
 main{
-  margin-top: 8vh;
+  margin-top: 5vh;
 }
-
+/*---------------------------fond decran daccuil-----------*/
 #style{
   position: fixed;
-  background-image: url(/image\ video/code3.jpg);
+  background-image: url(image\ video/code3.jpg);
   top: 0;
   left: 0;
   width: 100%;
@@ -25,9 +111,10 @@ main{
   background-position: center;
   background-size: cover;
   opacity: 0.05;
-  z-index: 2;
+  z-index: 0;
+  
 }
-
+/*----------------------------------bar navigateur-----------*/
 nav {
   z-index: 3;
   position: fixed;
@@ -142,7 +229,7 @@ video {
   /* Ajuste la taille de l'objet vidéo pour couvrir complètement l'élément */
   margin-left: 20px;
   /* Ajoute une marge de 20 pixels à gauche de l'élément */
-  z-index: 1;
+  z-index: 2;
 }
 
 #mainTitle {
@@ -155,9 +242,9 @@ video {
   text-align: center;
   font-size: 3rem;
   /* Centre le texte horizontalement dans l'élément */
-  color: white;
+  color: rgb(255, 255, 255);
   /* Définit la couleur du texte en rouge foncé */
-  z-index: 3;
+  z-index: 2;
 }
 
 
@@ -174,7 +261,7 @@ video {
   /* Positionne le haut de l'élément à 50% de la hauteur de son conteneur parent */
   left: 20%;
   /* Positionne la gauche de l'élément à 20% de la largeur de son conteneur parent */
-  color: #f50505;
+  color: #ffffff;
   /* Définit la couleur du texte en rouge clair */
   font-family: terminator;
   /* Définit la police du texte comme "terminator" */
@@ -182,7 +269,7 @@ video {
   /* Définit la taille de la police à 5 fois la taille de la police par défaut */
   letter-spacing: 0.2em;
   /* Ajoute un espacement de 0.2 em entre les lettres du texte */
-  z-index: 3;
+  z-index: 2;
 }
 
 #animation span {
@@ -284,144 +371,7 @@ video {
   animation-delay: 3.8s;
 }
 /*---------------------------------------------------------------------------------fin rotation lettre preformation----------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------- fond du text------------------------------------------------------------------------*/
-#expo {
-  /* Sélecteur pour l'élément avec l'ID "expo" */
-  width: 100vw;
-  /* Définit la largeur à 100% de la largeur de la vue */
-  height: 120vh;
-  /* Définit la hauteur à 120% de la hauteur de la vue */
-  background-image: url("image\ video/a.jpg");
-  /* Définit une image de fond depuis le chemin spécifié */
-  background-size: cover;
-  /* Ajuste la taille de l'arrière-plan pour couvrir complètement l'élément */
-  background-position: center 7vh;
-  /* Positionne l'arrière-plan au centre de l'élément avec un décalage vertical de 7% de la hauteur de la vue */
-  background-repeat: no-repeat;
-  /* Empêche la répétition de l'arrière-plan */
-}
 
-.text {
-  /* Sélecteur pour les éléments avec la classe "text" */
-  font-size: 1.6rem;
-  /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
-  width: 30vw;
-  /* Définit la largeur à 50% de la largeur de la vue */
-  margin: auto;
-  /* Centre l'élément horizontalement dans son conteneur parent */
-  padding: 10px;
-  /* Ajoute un remplissage intérieur de 10 pixels */
-  background-color: rgba(22, 22, 22, 0.93);
-  /* Définit la couleur d'arrière-plan avec une opacité de 0.93 */
-  color: white;
-  /* Définit la couleur du texte à blanc */
-  border: 1px solid black;
-  /* Ajoute une bordure d'un pixel de large de couleur noire */
-  border-radius: 25px;
-  /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
-}
-
-.titre {
-  /* Sélecteur pour les éléments avec la classe "titre" */
-  margin: 0px auto 0px auto;
-  /* Centre l'élément horizontalement dans son conteneur parent et supprime la marge supérieure */
-  text-align: center;
-  /* Centre le texte horizontalement dans l'élément */
-  background-color: rgba(22, 22, 22, 0.95);
-  /* Définit la couleur d'arrière-plan avec une opacité de 0.95 */
-  color: white;
-  /* Définit la couleur du texte à blanc */
-  border: 1px solid black;
-  /* Ajoute une bordure d'un pixel de large de couleur noire */
-  border-radius: 25px;
-  /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
-  font-size: 1.6rem;
-  /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
-  width: 19vw;
-  /* Définit la largeur à 19% de la largeur de la vue */
-  padding: 10px;
-  /* Ajoute un remplissage intérieur de 10 pixels */
-}
-
-/*--------------------------------------------(hover before)faire apparaitre des photo sur des mots text----------------------------------------------------------------*/
-/*On crée le pseudo element before qui est lié a asterix
-  On le met en display none afin qu'il ne sois pas visible
-*/
-
-@keyframes bgSpanOpacity{
-  0%{
-    opacity: 0;
-  }
-
-  100%{
-    opacity: 1;
-  }
-}
-
-.bgspan{
-  cursor: pointer;
-  color: aqua;
-}
-/*Lorsque l'on met notre souris sur le mot en question , on rend visible le pseudo element before*/
-.bgspan:hover::before{
-  display: inline-block;
-  animation: bgSpanOpacity 1.8s;
-}
-.bgspan::before { /* Sélecteur ::before pour ajouter du contenu avant l'élément avec la classe .bgspan */
-  content: "";
-  /* Ajoute un contenu vide */
-  top: 20vh;
-  /* Positionne le haut de l'élément à 20% de la hauteur de la vue */
-  left: 9vw;
-  /* Positionne la gauche de l'élément à 9% de la largeur de la vue */
-  display: none;
-  /* Masque l'élément, il ne sera pas affiché */
-  position: fixed;
-  /* Positionne l'élément de façon fixe par rapport à la fenêtre du navigateur */
-  width: 15vw;
-  /* Définit la largeur de l'élément à 15% de la largeur de la vue */
-  height: 20vw;
-  /* Définit la hauteur de l'élément à 20% de la largeur de la vue */
-  border: 1px solid black;
-  /* Ajoute une bordure d'un pixel de large de couleur noire */
-  border-radius: 10px;
-  /* Arrondit les coins de l'élément avec un rayon de 10 pixels */
-  background-size: cover;
-  /* Ajuste la taille de l'arrière-plan pour couvrir complètement l'élément */
-  background-position: center;
-  /* Positionne l'arrière-plan au centre de l'élément */
-  box-shadow: 5px 5px 5px white;
-  /* Ajoute une ombre de 5 pixels de décalage à droite et en bas avec une couleur noire */
-}
-#asterix::before {
-  background-image: url(image\ video/8835.jpg);
-}
-#manette::before{
-  background-image: url(image\ video/mannes.gif);
-}
-#manneq::before{
-  background-image: url(image\ video/manq.jpg);
-}
-#noel::before{
-  background-image: url(image\ video/sega.jpg);
-}
-#nes::before{
-  background-image: url(image\ video/nes.jpg);
-}
-#boy::before{
-  background-image: url(image\ video/boy.jpg);
-}
-#kid::before{
-  background-image: url(image\ video/kid.jpg);
-}
-#cousin::before{
-  background-image: url(image\ video/cousin.jpg);
-}
-#pc::before{
-  left: 0vw;
-  width: 25vw;
-  background-image: url(image\ video/1epc.jpg);
-}
 
 /*---------------------------------------------------------------------------galerie photo---------------------------------------------------------------------------------*/
 #pic{
@@ -432,4 +382,62 @@ video {
   background-repeat: space;
 }
 
-/*------------------------------------------------------------------------------interview------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------footer------------------------------------------------------------------------------*/
+footer{
+  position: relative;
+  width: 100%;
+  background: hwb(0 1% 99%);
+  opacity: 0.5;
+  min-height: 100px;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .social_icon,
+footer .menu
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+footer .social_icon li,
+footer .menu li
+{
+  list-style: none;
+  cursor: pointer;
+}
+footer .social_icon li a{
+  font-size: 2em;
+  color: #fc0404;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .social_icon li a:hover{
+  transform: translateY(-10px);
+}
+footer .menu li 
+{
+  font-size: 2em;
+  color: #fffcfc;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .menu li a:hover{
+opacity: 1;
+}
+footer p{
+  color: #f60404;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
