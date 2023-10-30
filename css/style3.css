@@ -8,6 +8,10 @@
   font-family: sans-serif;
 }
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
   Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
@@ -116,7 +120,7 @@ main {
   /* Sélecteur pour les éléments avec la classe "text" */
   font-size: 1.6rem;
   /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
-  width: 85vw;
+  width: 73vw;
   /* Définit la largeur à 50% de la largeur de la vue */
   margin: auto;
   /* Centre l'élément horizontalement dans son conteneur parent */
@@ -139,7 +143,7 @@ main {
 
 .titre {
   /* Sélecteur pour les éléments avec la classe "titre" */
-  margin: 0px auto 0px auto;
+  margin: 5rem auto 0px auto;
   /* Centre l'élément horizontalement dans son conteneur parent et supprime la marge supérieure */
   text-align: center;
   /* Centre le texte horizontalement dans l'élément */
@@ -186,7 +190,7 @@ main {
 /*Lorsque l'on met notre souris sur le mot en question , on rend visible le pseudo element before*/
 .bgspan:hover::before {
   display: inline-block;
-  animation: bgSpanOpacity 1.8s;
+  animation: bgSpanOpacity 1.4s;
 }
 .bgspan::before {
   /* Sélecteur ::before pour ajouter du contenu avant l'élément avec la classe .bgspan */
@@ -303,6 +307,16 @@ main {
 }
 #retro::before {
   background-image: url(../image\ video/retro4.jpg);
+  left: 0vw;
+  width: 17vw;
+}
+#mac::before {
+  background-image: url(../image\ video/mac.jpg);
+  left: 0vw;
+  width: 17vw;
+}
+#zen::before {
+  background-image: url(../image\ video/zen.jpg);
   left: 0vw;
   width: 17vw;
 }

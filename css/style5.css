@@ -7,6 +7,9 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+body {
+  background-image: url(../image\ video/time.jpg);
+}
 nav {
   display: flex;
   /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
@@ -20,7 +23,7 @@ nav {
   /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
   background-color: rgb(0, 0, 0);
   /*couleur de fond d'ecran */
-  border-bottom: 2px solid rgb(0, 4, 244);
+  border-bottom: 2px solid rgb(136, 187, 230);
   /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
 }
 
@@ -51,7 +54,7 @@ nav > a {
 /*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
 nav > a:focus,
 nav > a:hover {
-  color: #0602fa;
+  color: rgb(106, 170, 223);
 }
 
 /*
@@ -106,12 +109,8 @@ nav > a:after {
   background-repeat: no-repeat;
   /* Empêche la répétition de l'arrière-plan */
 }
-main {
-  margin-top: 3vh;
-}
 
 .conclu {
-
   /* Sélecteur pour les éléments avec la classe "conclu" */
   font-size: 1.6rem;
   /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
@@ -123,17 +122,13 @@ main {
   /* Ajoute un remplissage intérieur de 10 pixels */
   background-color: rgba(22, 22, 22, 0.93);
   /* Définit la couleur d'arrière-plan avec une opacité de 0.93 */
-  color: rgb(255, 255, 255);
+  color: rgb(159, 199, 232);
   /* Définit la couleur du texte à blanc */
-  border: 2px solid rgb(93, 0, 255);
+  border: 2px solid rgb(66, 121, 196);
   /* Ajoute une bordure d'un pixel de large de couleur noire */
   border-radius: 25px;
   /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
-  box-shadow: -5px 5px 0px 0px rgb(84, 19, 248),
-    -10px 10px 0px 0px rgba(93, 55, 216, 0.6),
-    -15px 15px 0px 0px rgba(48, 59, 169, 0.4),
-    -20px 20px 0px 0px rgba(56, 54, 159, 0.2),
-    -25px 25px 0px 0px rgba(45, 47, 141, 0.1);
+  text-align: justify;
 }
 
 .title {
@@ -144,38 +139,16 @@ main {
   /* Centre le texte horizontalement dans l'élément */
   background-color: rgba(22, 22, 22, 0.95);
   /* Définit la couleur d'arrière-plan avec une opacité de 0.95 */
-  color: white;
+  color: rgb(159, 199, 232);
   /* Définit la couleur du texte à blanc */
-  border: 2px solid rgb(21, 0, 251);
+  border: 2px solid rgb(159, 199, 232)
   /* Ajoute une bordure d'un pixel de large de couleur noire */
   border-radius: 25px;
   /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
   width: 15vw;
   /* Définit la largeur à 19% de la largeur de la vue */
   padding: 10px;
   /* Ajoute un remplissage intérieur de 10 pixels */
-  box-shadow: -5px 5px 0px 0px rgb(84, 19, 248),
-    -10px 10px 0px 0px rgba(93, 55, 216, 0.6),
-    -15px 15px 0px 0px rgba(48, 59, 169, 0.4),
-    -20px 20px 0px 0px rgba(56, 54, 159, 0.2),
-    -25px 25px 0px 0px rgba(45, 47, 141, 0.1);
 }
-video {
-  /* Sélecteur pour tous les éléments vidéo */
-  height: 100vh;
-  /* Définit la hauteur à 100% de la hauteur de la vue */
-  width: 100vw;
-  /* Définit la largeur à 100% de la largeur de la vue */
-  left: 0;
-  /* Place l'élément au bord gauche de son conteneur parent */
-  right: 0;
-  /* Place l'élément au bord droit de son conteneur parent */
-  top: 0;
-  /* Place l'élément au bord supérieur de son conteneur parent */
-  bottom: 0;
-  /* Place l'élément au bord inférieur de son conteneur parent */
-  object-fit: cover;
-  /* Ajuste la taille de l'objet vidéo pour couvrir complètement l'élément */
-  margin-left: 20px;

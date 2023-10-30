@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "sign";
+  src: url(sign.otf);
+}
+
+@font-face {
+  font-family: "byl";
+  src: url(byl.otf);
+}
 :root {
   --green: rgb(61, 214, 88);
 }
@@ -68,6 +77,7 @@ body {
   text-align: center;
   box-shadow: 0 5px 10px #000;
   font-size: 2em;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .card .back .link {
@@ -131,6 +141,14 @@ nav {
   background-color: rgb(26, 26, 26); /*couleur de fond d'ecran */
   border-bottom: 2px solid red; /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
 }
+nav img {
+  position: absolute;
+  height: 6.5vh;
+  filter: brightness(0) invert(1);
+  top: 0;
+  left: 2rem;
+}
+
 /*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
 nav > a {
   color: white;
@@ -251,6 +269,7 @@ video {
   /* Définit la couleur du texte en rouge foncé */
   z-index: 2;
   letter-spacing: 0.3em;
+  font-family: byl;
 }
 
 #mainTitle > h1 {
@@ -280,6 +299,7 @@ video {
   height: 100vh;
   align-items: center;
   justify-content: center;
+  font-family: byl;
 }
 
 #animation span {
@@ -455,4 +475,9 @@ footer p {
 }
 footer p a {
   color: #ffffff;
+}
+footer span {
+  font-size: 2.1em;
+  color: #f3f3f3;
+  font-family: sign;
 }
