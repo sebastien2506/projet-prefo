@@ -141,7 +141,7 @@ nav > a:after {
   /* Définit la couleur d'arrière-plan avec une opacité de 0.95 */
   color: rgb(159, 199, 232);
   /* Définit la couleur du texte à blanc */
-  border: 2px solid rgb(159, 199, 232)
+  border: 2px solid rgb(159, 199, 232);
   /* Ajoute une bordure d'un pixel de large de couleur noire */
   border-radius: 25px;
   /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
