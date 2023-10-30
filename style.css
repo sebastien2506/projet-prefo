@@ -42,10 +42,12 @@ nav > a:hover:after {
   width: 100%;
   left: 0%;
 }
+
 /*   Cela concerne tout les balise html <a> qui se situe dans la balise <nav> 
      Le after qant a lui signifie qu'il ajoute un element virtuel , une fausse balise après chaque <a>
      Donc c'est un element html qui ne figure par dans le fichier html
 */
+
 nav > a:after {
   content: "";
   pointer-events: none;
@@ -177,8 +179,8 @@ main {
   width: 50vw;
   margin: auto;
   padding: 10px;
-  background-color: rgba(22, 22, 22, 0.85);
-  color: white;
+  background-color: rgba(22, 22, 22, 0.93);
+  color: rgb(255, 255, 255);
   border: 1px solid black;
   border-radius: 25px;
 }
