@@ -1,158 +1,164 @@
+/*--------------------------------------------------------------------------------------gallery----------------------------------------------------------------------------*/
 body {
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    margin: 0rem;
-    overflow: hidden;
-  }
-  nav {
-    z-index: 3;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    display: flex;/*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  margin: 0rem;
+  overflow: hidden;
+}
+nav {
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex; /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
   
                      Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
     
                      Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
-    justify-content: end;/*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
-    padding-right: 60px;/*La propriété padding-right d'un élément correspond à l'espace nécessaire à la droite d'un élément. La zone de remplissage correspond à l'espace entre le contenu et la bordure. padding-right ne peut pas recevoir de valeurs négatives.*/
-    height: 7vh; /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
-    background-color: rgb(26, 26, 26); /*couleur de fond d'ecran */
-    border-bottom: 2px solid red; /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
-    
-  }
-  /*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
-  nav > a {
-    color: white;
-    padding-top: 2vh;
-    margin: 0px 10px 0px 40px;
-    font-size: 1.6rem;/*La propriété font-size définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type <length>) (par exemple exprimées avec les unités em ou ex).*/
-    font-weight: bold; /*La propriété CSS font-weight permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. font-family). Certaines fontes n'existent qu'avec les niveaux de graisses normal et bold.*/
-    position: relative; /*La propriété CSS position définit la façon dont un élément est positionné dans un document. Les propriétés top, right, bottom et left déterminent l'emplacement final de l'élément positionné.*/
-    text-decoration: none; /*La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une propriété raccourcie qui permet de paramétrer simultanément les propriétés « détaillées » : text-decoration-line, text-decoration-color et text-decoration-style.*/
-    text-transform: uppercase; /*La propriété text-transform définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations Ruby.*/
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); /*La propriété transition-timing-function décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un effet de transition sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.*/
-    transition-duration: 400ms; /*La propriété transition-duration définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, 0s, indique qu'il n'y aura aucune animation.*/
-    transition-property: color; /*La propriété transition-property désigne les noms des propriétés CSS sur lesquelles un effet de transition devrait être appliqué.*/
-    font-family: serif;
-  }
-  
-  /*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
-  nav > a:focus,
-  nav > a:hover {
-    color: #ff0000;
-  }
-  
-  /*
+  justify-content: end; /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
+  padding-right: 60px; /*La propriété padding-right d'un élément correspond à l'espace nécessaire à la droite d'un élément. La zone de remplissage correspond à l'espace entre le contenu et la bordure. padding-right ne peut pas recevoir de valeurs négatives.*/
+  height: 7vh; /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
+  background-color: rgb(26, 26, 26); /*couleur de fond d'ecran */
+  border-bottom: 2px solid red; /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
+}
+/*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
+nav > a {
+  color: white;
+  padding-top: 2vh;
+  margin: 0px 10px 0px 40px;
+  font-size: 1.6rem; /*La propriété font-size définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type <length>) (par exemple exprimées avec les unités em ou ex).*/
+  font-weight: bold; /*La propriété CSS font-weight permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. font-family). Certaines fontes n'existent qu'avec les niveaux de graisses normal et bold.*/
+  position: relative; /*La propriété CSS position définit la façon dont un élément est positionné dans un document. Les propriétés top, right, bottom et left déterminent l'emplacement final de l'élément positionné.*/
+  text-decoration: none; /*La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une propriété raccourcie qui permet de paramétrer simultanément les propriétés « détaillées » : text-decoration-line, text-decoration-color et text-decoration-style.*/
+  text-transform: uppercase; /*La propriété text-transform définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations Ruby.*/
+  transition-timing-function: cubic-bezier(
+    0.25,
+    0.8,
+    0.25,
+    1
+  ); /*La propriété transition-timing-function décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un effet de transition sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.*/
+  transition-duration: 400ms; /*La propriété transition-duration définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, 0s, indique qu'il n'y aura aucune animation.*/
+  transition-property: color; /*La propriété transition-property désigne les noms des propriétés CSS sur lesquelles un effet de transition devrait être appliqué.*/
+  font-family: serif;
+}
+
+/*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
+nav > a:focus,
+nav > a:hover {
+  color: #ff0000;
+}
+
+/*
   Lorsque l'on met notre souris sur les balises <a> , l'element after est changé.
   On change le width et la position left de l'element after
   */
-  nav > a:focus:after,
-  nav > a:hover:after {
-    width: 100%;
-    left: 0%;
-  }
-  /*   Cela concerne tout les balise html <a> qui se situe dans la balise <nav> 
+nav > a:focus:after,
+nav > a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+/*   Cela concerne tout les balise html <a> qui se situe dans la balise <nav> 
        Le after qant a lui signifie qu'il ajoute un element virtuel , une fausse balise après chaque <a>
        Donc c'est un element html qui ne figure par dans le fichier html
   */
-  nav > a:after {
-    /* Sélecteur pour les pseudo-éléments ::after des balises <a> enfants directs de l'élément <nav> */
-    content: "";
-    /* Ajoute un contenu vide */
-    pointer-events: none;
-    /* Désactive les événements de pointeur pour cet élément, ce qui permettra de cliquer à travers lui */
-    bottom: -2px;
-    /* Positionne le bas de l'élément 2 pixels au-dessous de sa position normale */
-    left: 50%;
-    /* Positionne la gauche de l'élément au centre de son conteneur parent */
-    position: absolute;
-    /* Positionne l'élément de façon absolue par rapport à son conteneur parent */
-    width: 0%;
-    /* Initialise la largeur de l'élément à 0 */
-    height: 2px;
-    /* Définit la hauteur de l'élément à 2 pixels */
-    background-color: #fff;
-    /* Définit la couleur d'arrière-plan en blanc */
-    transition-timing-function: cubic-bezier(0.25, 0.8, 1, 1);
-    /* Définit la fonction de temporisation pour les transitions (effet d'accélération personnalisé) */
-    transition-duration: 0.8s;
-    /* Définit la durée de la transition à 0.8 seconde */
-    transition-property: width, left;
-    /* Spécifie les propriétés CSS qui seront animées lors de la transition */
-  }
-  h5{
-    color: #fff;
-    font-size: 50px;
-    text-align: center;
-    }
-  #image-track {
-    display: flex;
-    gap: 4vmin;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(0%, -50%); 
-    user-select: none; /* -- Prevent image highlighting -- */
-  }
-  
-  #image-track > .image {
-    width: 40vmin;
-    height: 56vmin;
-    object-fit: cover;
-    object-position: 100% center;
-  }
-  
-  /* -- YouTube Link Styles -- */
-  
-  body.menu-toggled > .meta-link > span {
-    color: rgb(30, 30, 30);
-  }
-  
-  #source-link {
-    bottom: 60px;
-  }
-  
-  #source-link > i {
-    color: rgb(94, 106, 210);
-  }
-  
-  #yt-link > i {
-    color: rgb(239, 83, 80);
-  }
-  
-  .meta-link {
-    align-items: center;
-    backdrop-filter: blur(3px);
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
-    bottom: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    cursor: pointer;  
-    display: inline-flex;
-    gap: 5px;
-    left: 10px;
-    padding: 10px 20px;
-    position: fixed;
-    text-decoration: none;
-    transition: background-color 400ms, border-color 400ms;
-    z-index: 10000;
-  }
-  
-  .meta-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .meta-link > i, .meta-link > span {
-    height: 20px;
-    line-height: 20px;
-  }
-  
-  .meta-link > span {
-    color: white;
-    font-family: "Rubik", sans-serif;
-    font-weight: 500;
-  }
+nav > a:after {
+  /* Sélecteur pour les pseudo-éléments ::after des balises <a> enfants directs de l'élément <nav> */
+  content: "";
+  /* Ajoute un contenu vide */
+  pointer-events: none;
+  /* Désactive les événements de pointeur pour cet élément, ce qui permettra de cliquer à travers lui */
+  bottom: -2px;
+  /* Positionne le bas de l'élément 2 pixels au-dessous de sa position normale */
+  left: 50%;
+  /* Positionne la gauche de l'élément au centre de son conteneur parent */
+  position: absolute;
+  /* Positionne l'élément de façon absolue par rapport à son conteneur parent */
+  width: 0%;
+  /* Initialise la largeur de l'élément à 0 */
+  height: 2px;
+  /* Définit la hauteur de l'élément à 2 pixels */
+  background-color: #fff;
+  /* Définit la couleur d'arrière-plan en blanc */
+  transition-timing-function: cubic-bezier(0.25, 0.8, 1, 1);
+  /* Définit la fonction de temporisation pour les transitions (effet d'accélération personnalisé) */
+  transition-duration: 0.8s;
+  /* Définit la durée de la transition à 0.8 seconde */
+  transition-property: width, left;
+  /* Spécifie les propriétés CSS qui seront animées lors de la transition */
+}
+h5 {
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+}
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  user-select: none; /* -- Prevent image highlighting -- */
+}
+
+#image-track > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+/* -- YouTube Link Styles -- */
+
+body.menu-toggled > .meta-link > span {
+  color: rgb(30, 30, 30);
+}
+
+#source-link {
+  bottom: 60px;
+}
+
+#source-link > i {
+  color: rgb(94, 106, 210);
+}
+
+#yt-link > i {
+  color: rgb(239, 83, 80);
+}
+
+.meta-link {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  bottom: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  text-decoration: none;
+  transition: background-color 400ms, border-color 400ms;
+  z-index: 10000;
+}
+
+.meta-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-link > i,
+.meta-link > span {
+  height: 20px;
+  line-height: 20px;
+}
+
+.meta-link > span {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
