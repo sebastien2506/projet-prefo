@@ -1,4 +1,6 @@
-/* -----------------------------------------------------------------------------le bouton navbar-----------------------------------------------------------------------------*/
+:root{
+  --green:rgb(61, 214, 88);
+}
 * {
   margin: 0; /*La propriété margin définit la taille des marges sur les quatre côtés de l'élément. C'est une propriété raccourcie qui permet de manipuler les autres propriétés de marges : margin-top, margin-right, margin-bottom et margin-left. */
   padding: 0;/*La propriété padding est une propriété raccourcie qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. les boîtes CSS). Elle synthétise padding-top, padding-right, padding-bottom, padding-left.*/
@@ -11,7 +13,6 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-
 }
 /*--------------------------------------------------------------------------------------card rota--------------------------------------------------------------------------------*/
 .card {
@@ -96,25 +97,25 @@ body {
 .card:hover .back {
   transform: perspective(600px) rotateY(360deg);
 }
-/*---------------------------------fin card----------------*/
+/*---------------------------------------------------------------------------------------------fin card-------------------------------------------------------------------------*/
 main{
   margin-top: 5vh;
 }
-/*---------------------------fond decran daccuil-----------*/
+/*------------------------------------------------------------------decran daccuil--------------------------------------------------------------------------------------------*/
 #style{
-  position: fixed;
-  background-image: url(image\ video/code3.jpg);
+  position: absolute;
+  background-image: url(image\ video/code1.jpg);
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   background-position: center;
   background-size: cover;
-  opacity: 0.05;
+  opacity: 0.07;
   z-index: 0;
   
 }
-/*----------------------------------bar navigateur-----------*/
+/*------------------------------------------------------------------------------bar navigateur------------------------------------------------------------------------------------*/
 nav {
   z-index: 3;
   position: fixed;
@@ -145,6 +146,7 @@ nav > a {
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); /*La propriété transition-timing-function décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un effet de transition sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.*/
   transition-duration: 400ms; /*La propriété transition-duration définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, 0s, indique qu'il n'y aura aucune animation.*/
   transition-property: color; /*La propriété transition-property désigne les noms des propriétés CSS sur lesquelles un effet de transition devrait être appliqué.*/
+  font-family: serif;
 }
 
 /*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
@@ -202,6 +204,7 @@ h5{
   /* Sélecteur pour l'élément avec l'ID "index" */
   background: black;
   /* Définit la couleur d'arrière-plan en noir */
+  overflow-x: hidden;
 }
 
 #animation_section {
@@ -245,8 +248,8 @@ video {
   color: rgb(255, 255, 255);
   /* Définit la couleur du texte en rouge foncé */
   z-index: 2;
+  letter-spacing: 0.3em;
 }
-
 
 #mainTitle > h1 {
   animation: projet 5.5s alternate forwards;
@@ -257,19 +260,25 @@ video {
   /* Sélecteur pour l'élément avec l'ID "animation" */
   position: absolute;
   /* Positionne l'élément de façon absolue par rapport à son conteneur parent */
-  top: 50%;
+  top: 0;
   /* Positionne le haut de l'élément à 50% de la hauteur de son conteneur parent */
-  left: 20%;
+  left: 0;
   /* Positionne la gauche de l'élément à 20% de la largeur de son conteneur parent */
   color: #ffffff;
   /* Définit la couleur du texte en rouge clair */
   font-family: terminator;
   /* Définit la police du texte comme "terminator" */
-  font-size: 5em;
+  font-size: 7em;
   /* Définit la taille de la police à 5 fois la taille de la police par défaut */
-  letter-spacing: 0.2em;
+  letter-spacing: 0.5em;
   /* Ajoute un espacement de 0.2 em entre les lettres du texte */
   z-index: 2;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 #animation span {
@@ -372,29 +381,31 @@ video {
 }
 /*---------------------------------------------------------------------------------fin rotation lettre preformation----------------------------------------------------------*/
 
-
-/*---------------------------------------------------------------------------galerie photo---------------------------------------------------------------------------------*/
-#pic{
-  width: 100vw;
-  height: 750vh;
-  background-image: url("image\ video/gal.jpg");
-  background-size: cover;
-  background-repeat: space;
-}
-
-/*------------------------------------------------------------------------------footer------------------------------------------------------------------------------*/
-footer{
+/*-----------------------------------------------------------------------------footer------------------------------------------------------------------------------------------*/
+/* Définition du style pour la section "footer" */
+footer {
+  /* Position relative pour le contexte de positionnement */
   position: relative;
+  /* Largeur de 100% de la largeur disponible */
   width: 100%;
+  /* Fond avec une teinte, une saturation et une luminosité spécifiques */
   background: hwb(0 1% 99%);
+  /* Opacité de 0.5 (50%) pour le fond */
   opacity: 0.5;
+  /* Hauteur minimale de 100 pixels pour le pied de page */
   min-height: 100px;
+  /* Rembourrage de 10 pixels en haut et en bas, 50 pixels à gauche et à droite */
   padding: 10px 50px;
+  /* Utilisation de flexbox pour le positionnement des éléments internes */
   display: flex;
+  /* Centrage horizontal des éléments internes */
   justify-content: center;
+  /* Centrage vertical des éléments internes */
   align-items: center;
+  /* Alignement des éléments internes en colonne (verticalement) */
   flex-direction: column;
 }
+
 footer .social_icon,
 footer .menu
 {
@@ -413,31 +424,39 @@ footer .menu li
 }
 footer .social_icon li a{
   font-size: 2em;
-  color: #fc0404;
+  color: #ffffff;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
 }
-footer .social_icon li a:hover{
+footer .social_icon  a:hover{
   transform: translateY(-10px);
 }
 footer .menu li 
 {
-  font-size: 2em;
-  color: #fffcfc;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
   text-decoration: none;
   opacity: 0.75;
 }
-footer .menu li a:hover{
+footer .menu a 
+{
+  font-size: 2em;
+  color: #ff0000;
+  transition: 0.5s;
+  
+}
+footer .menu  a:hover{
 opacity: 1;
 }
 footer p{
-  color: #f60404;
+  color: #ffffff;
   text-align: center;
   margin-top: 15px;
   margin-bottom: 10px;
   font-size: 1.1em;
+}
+footer p a {
+color: #ffffff;
 }

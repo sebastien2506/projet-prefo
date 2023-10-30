@@ -1,3 +1,5 @@
+:root{
+  --green:rgb(61, 214, 88);}
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +7,10 @@
     font-family: sans-serif;
 }
 nav {
-    display: flex;
-    /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
-  
-                     Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
-    
-                     Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
+  display: flex;
+  /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
+  Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
+   Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
     justify-content: end;
     /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
     padding-right: 60px;
@@ -21,7 +21,7 @@ nav {
     /*couleur de fond d'ecran */
     border-bottom: 2px solid rgb(0, 4, 244);
     /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
-
+ 
 
 }
 
@@ -47,7 +47,7 @@ nav>a {
     /*La propriété transition-duration définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, 0s, indique qu'il n'y aura aucune animation.*/
     transition-property: color;
     /*La propriété transition-property désigne les noms des propriétés CSS sur lesquelles un effet de transition devrait être appliqué.*/
-    font-family: sans-serif;
+    font-family: serif;
 }
 
 /*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
@@ -118,21 +118,25 @@ nav > a:after {
     /* Sélecteur pour les éléments avec la classe "text" */
     font-size: 1.6rem;
     /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
-    width: 30vw;
+    width: 35vw;
     /* Définit la largeur à 50% de la largeur de la vue */
     margin: auto;
     /* Centre l'élément horizontalement dans son conteneur parent */
-    padding: 10px;
+    padding: 50px;
     /* Ajoute un remplissage intérieur de 10 pixels */
     background-color: rgba(22, 22, 22, 0.93);
     /* Définit la couleur d'arrière-plan avec une opacité de 0.93 */
-    color: white;
+    color: rgb(255, 255, 255);
     /* Définit la couleur du texte à blanc */
     border: 2px solid rgb(93, 0, 255);
     /* Ajoute une bordure d'un pixel de large de couleur noire */
     border-radius: 25px;
     /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
-    box-shadow: 60px 60px 255px rgba(87, 1, 248, 0.5);
+    box-shadow: -5px 5px 0px 0px rgb(84, 19, 248),
+    -10px 10px 0px 0px rgba(93, 55, 216, 0.6),
+    -15px 15px 0px 0px rgba(48, 59, 169, 0.4),
+    -20px 20px 0px 0px rgba(56, 54, 159, 0.2),
+    -25px 25px 0px 0px rgba(45, 47, 141, 0.1);
   }
   
   .titre {
@@ -155,7 +159,11 @@ nav > a:after {
     /* Définit la largeur à 19% de la largeur de la vue */
     padding: 10px;
     /* Ajoute un remplissage intérieur de 10 pixels */
-    box-shadow: 250px 250px 250px rgba(0, 0, 0, );
+    box-shadow:-5px 5px 0px 0px rgb(84, 19, 248),
+    -10px 10px 0px 0px rgba(93, 55, 216, 0.6),
+    -15px 15px 0px 0px rgba(48, 59, 169, 0.4),
+    -20px 20px 0px 0px rgba(56, 54, 159, 0.2),
+    -25px 25px 0px 0px rgba(45, 47, 141, 0.1);
   }
   
   /*--------------------------------------------(hover before)faire apparaitre des photo sur des mots text----------------------------------------------------------------*/
@@ -175,7 +183,7 @@ nav > a:after {
   
   .bgspan{
     cursor: pointer;
-    color: rgb(160, 160, 229);
+    color: rgb(136, 195, 253);
   }
   /*Lorsque l'on met notre souris sur le mot en question , on rend visible le pseudo element before*/
   .bgspan:hover::before{
@@ -213,21 +221,33 @@ nav > a:after {
   }
   #manette::before{
     background-image: url(../image\ video/mannes.gif);
+    left: 0vw;
+    width: 25vw;
   }
   #manneq::before{
     background-image: url(../image\ video/manq.jpg);
+    left: 0vw;
+    width: 25vw;
   }
   #noel::before{
     background-image: url(../image\ video/sega.jpg);
+    left: 0vw;
+    width: 25vw;
   }
   #nes::before{
     background-image: url(../image\ video/nes.jpg);
+    left: 0vw;
+    width: 25vw;
   }
   #boy::before{
     background-image: url(../image\ video/boy.jpg);
+    left: 0vw;
+    width: 25vw;
   }
   #kid::before{
     background-image: url(../image\ video/kid.jpg);
+    left: 0vw;
+    width: 15vw;
   }
   #cousin::before{
     background-image: url(../image\ video/cousin.jpg);
@@ -236,4 +256,54 @@ nav > a:after {
     left: 0vw;
     width: 25vw;
     background-image: url(../image\ video/1epc.jpg);
+  }
+  #msn::before{
+    background-image: url(../image\ video/msn.jpg);
+    left: 0vw;
+    width: 25vw;
+  }
+  #phone::before{
+    background-image: url(../image\ video/phone.jpg);
+    left: 0vw;
+    width: 25vw;
+  }
+  #you::before{
+    background-image: url(../image\ video/you.jpg);
+    left: 0vw;
+    width: 25vw;
+  }
+  #emul::before{
+    background-image: url(../image\ video/emul.webp);
+    left: 0vw;
+    width: 30vw;
+  }
+  #lent::before{
+    background-image: url(../image\ video/lent.webp);
+    left: 0vw;
+    width: 30vw;
+  }
+  #fiber::before{
+    background-image: url(../image\ video/fiber.jpg);
+    left: 0vw;
+    width: 30vw;
+  }
+  #futur::before{
+    background-image: url(../image\ video/futur.jpg);
+    left: 0vw;
+    width: 30vw;
+  }
+  #bit::before{
+    background-image: url(../image\ video/8bit.jpg);
+    left: 0vw;
+    width: 30vw;
+  }
+  #ps5::before{
+    background-image: url(../image\ video/ps5.webp);
+    left: 0vw;
+    width: 30vw;
+  }
+  #retro::before{
+    background-image: url(../image\ video/retro4.jpg);
+    left: 0vw;
+    width: 17vw;
   }

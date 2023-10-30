@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Marck+Script&family=Open+Sans:ital,wght@1,700&family=Poppins:ital,wght@1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
 
-/*----------------------------------css interview-------------------*/
-
+/*------------------------------------------------------------------------------------------css interview----------------------------------------------------------------------------------------------------*/
+:root{
+    --green:rgb(61, 214, 88);}
 * {
     margin: 0;
     padding: 0;
@@ -52,7 +53,7 @@ nav>a {
     /*La propriété transition-duration définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, 0s, indique qu'il n'y aura aucune animation.*/
     transition-property: color;
     /*La propriété transition-property désigne les noms des propriétés CSS sur lesquelles un effet de transition devrait être appliqué.*/
-    font-family: sans-serif;
+    font-family: serif;
 }
 
 /*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
@@ -638,5 +639,5 @@ nav > a:after {
 
 
 .online span {
-    color: #06d755
+    color:var(--green);
 }
