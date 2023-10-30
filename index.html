@@ -4,18 +4,19 @@
     <title>smoke animation</title>
     <style type="text/css"></style>
   </head>
-  <body>
+  <body id="index">
     <nav>
       <a href="#">Acceuil</a>
-      <a href="interview/interview.html">interview</a>
-      <a href="expo/expo.html">expo</a>
+      <a href="interview/interview.html">Interview</a>
+      <a href="expo/expo.html">Expo</a> 
     </nav>
-    <main id="index">
-
-      <h1 class="titre"></h1>
-      <section>
-        <h1 id="mainTitle">PROJET</h1>
+    <main>
+      <section id="animation_section">
+        <div id="mainTitle">
+          <h1>PROJET</h1>
+        </div>
         <video src="smoke.mp4" autoplay muted></video>
+        <div id="style"></div>
         <div id="animation">
           <span>P</span>
           <span>R</span>
@@ -30,7 +31,63 @@
           <span>O</span>
           <span>N</span>
         </div>
-    </main>
+    </main> 
     </section>
+    <div class="card">
+      <div class="face front">
+          <img src="image video/inter.jpg" alt="">
+          <h3>Interview</h3>
+      </div>
+      <div class="face back">
+          <h3>Interview</h3>
+          <p>Mon interview avec Arnaud, développeur JavaScript chez Dastra. </p>
+          <div class="link">
+              <a href="interview/interview.html">Details</a>
+          </div>
+      </div>
+  </div>
+  <div class="card">
+      <div class="face front">
+          <img src="image video/nam.jpg" alt="">
+          <h3>NAM-IP</h3>
+      </div>
+      <div class="face back">
+          <h3>NAM-IP</h3>
+          <p>Mes souvenirs, mon point de vue sur ma journée et mon ressenti concernant l'exposition NAM-IP à Namur.</p>
+          <div class="link">
+              <a href="expo/expo.html">Details</a>
+          </div>
+      </div>
+  </div>
+  <div class="card">
+      <div class="face front">
+          <img src="image video/cam.jpg" alt="">
+          <h3>Photo</h3>
+      </div>
+      <div class="face back">
+          <h3>Photo</h3>
+          <p>NAM-IP l'expo de l'histoire de l'informatique en Photo.</p>
+          <div class="link">
+              <a href="expo/galerie.html">Details</a>
+          </div>
+      </div>
+  </div>
+  <footer>
+    <ul class="social_icon">
+      <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+    </ul>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="interview/interview.html">Interview</a></li>
+      <li><a href="expo/expo.html">Expo</a></li>
+      <li><a href="expo/galerie.html">Photo</a></li>
+    </ul>
+    <p>© 2023 | Copyright | <a href="https://www.cf2m.be/home" target="_blank">cf2m</a>, All rights reserved</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
