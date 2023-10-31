@@ -6,6 +6,7 @@ body {
   margin: 0rem;
   overflow: hidden;
 }
+/*----------------------------------------------------------------------------------navbar-----------------------------------------------------------------------------------------------*/
 nav {
   z-index: 3;
   position: fixed;
@@ -17,12 +18,17 @@ nav {
     
                      Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
   justify-content: end; /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
-  padding-right: 60px; /*La propriété padding-right d'un élément correspond à l'espace nécessaire à la droite d'un élément. La zone de remplissage correspond à l'espace entre le contenu et la bordure. padding-right ne peut pas recevoir de valeurs négatives.*/
   height: 7vh; /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
   background-color: rgb(26, 26, 26); /*couleur de fond d'ecran */
   border-bottom: 2px solid red; /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
 }
 /*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
+
+/*Permet de mettre un margin right plus élevé pour la dernière balise a de la nav*/
+nav > a:nth-last-child(1) {
+  margin-right: 65px;
+}
+
 nav > a {
   color: white;
   padding-top: 2vh;
@@ -86,6 +92,7 @@ nav > a:after {
   /* Définit la durée de la transition à 0.8 seconde */
   transition-property: width, left;
   /* Spécifie les propriétés CSS qui seront animées lors de la transition */
+  /*--------------------------------------------------------------------------fin navbar------------------------------------------------------------------------------------------------------*/
 }
 h5 {
   color: #fff;
@@ -103,7 +110,7 @@ h5 {
 }
 
 #image-track > .image {
-  width: 40vmin;
+  width: 45vmin;
   height: 56vmin;
   object-fit: cover;
   object-position: 100% center;

@@ -11,20 +11,20 @@ body {
   background-image: url(../image\ video/time.jpg);
 }
 nav {
-  display: flex;
-  /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
-    Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
-     Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
-  justify-content: end;
-  /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
-  padding-right: 60px;
-  /*La propriété padding-right d'un élément correspond à l'espace nécessaire à la droite d'un élément. La zone de remplissage correspond à l'espace entre le contenu et la bordure. padding-right ne peut pas recevoir de valeurs négatives.*/
-  height: 7vh;
-  /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
-  background-color: rgb(0, 0, 0);
-  /*couleur de fond d'ecran */
-  border-bottom: 2px solid rgb(136, 187, 230);
-  /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex; /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
+
+                   Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
+  
+                   Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
+  justify-content: end; /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
+  padding-right: 60px; /*La propriété padding-right d'un élément correspond à l'espace nécessaire à la droite d'un élément. La zone de remplissage correspond à l'espace entre le contenu et la bordure. padding-right ne peut pas recevoir de valeurs négatives.*/
+  height: 7vh; /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
+  background-color: rgb(26, 26, 26); /*couleur de fond d'ecran */
+  border-bottom: 2px solid red; /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
 }
 
 /*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
@@ -133,7 +133,7 @@ nav > a:after {
 
 .title {
   /* Sélecteur pour les éléments avec la classe "title" */
-  margin: 0px auto 0px auto;
+  margin: 100px auto 0px auto;
   /* Centre l'élément horizontalement dans son conteneur parent et supprime la marge supérieure */
   text-align: center;
   /* Centre le texte horizontalement dans l'élément */

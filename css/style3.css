@@ -216,7 +216,7 @@ main {
   /* Ajuste la taille de l'arrière-plan pour couvrir complètement l'élément */
   background-position: center;
   /* Positionne l'arrière-plan au centre de l'élément */
-  box-shadow: 5px 5px 5px white;
+  box-shadow: 5px 5px 5px rgb(255, 255, 255);
   /* Ajoute une ombre de 5 pixels de décalage à droite et en bas avec une couleur noire */
 }
 #asterix::before {
@@ -224,27 +224,27 @@ main {
 }
 #manette::before {
   background-image: url(../image\ video/mannes.gif);
-  left: 0vw;
+  left: 10vw;
   width: 25vw;
 }
 #manneq::before {
   background-image: url(../image\ video/manq.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 25vw;
 }
 #noel::before {
   background-image: url(../image\ video/sega.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 25vw;
 }
 #nes::before {
   background-image: url(../image\ video/nes.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 25vw;
 }
 #boy::before {
   background-image: url(../image\ video/boy.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 25vw;
 }
 #kid::before {
