@@ -249,74 +249,74 @@ main {
 }
 #kid::before {
   background-image: url(../image\ video/kid.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 15vw;
 }
 #cousin::before {
   background-image: url(../image\ video/cousin.jpg);
 }
 #pc::before {
-  left: 0vw;
+  left: 10vw;
   width: 25vw;
   background-image: url(../image\ video/1epc.jpg);
 }
 #msn::before {
   background-image: url(../image\ video/msn.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 25vw;
 }
 #phone::before {
   background-image: url(../image\ video/phone.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 25vw;
 }
 #you::before {
   background-image: url(../image\ video/you.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 25vw;
 }
 #emul::before {
   background-image: url(../image\ video/emul.webp);
-  left: 0vw;
+  left: 10vw;
   width: 30vw;
 }
 #lent::before {
   background-image: url(../image\ video/lent.webp);
-  left: 0vw;
+  left: 10vw;
   width: 30vw;
 }
 #fiber::before {
   background-image: url(../image\ video/fiber.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 30vw;
 }
 #futur::before {
   background-image: url(../image\ video/futur.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 30vw;
 }
 #bit::before {
   background-image: url(../image\ video/8bit.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 30vw;
 }
 #ps5::before {
   background-image: url(../image\ video/ps5.webp);
-  left: 0vw;
+  left: 10vw;
   width: 30vw;
 }
 #retro::before {
   background-image: url(../image\ video/retro4.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 17vw;
 }
 #mac::before {
   background-image: url(../image\ video/mac.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 17vw;
 }
 #zen::before {
   background-image: url(../image\ video/zen.jpg);
-  left: 0vw;
+  left: 10vw;
   width: 17vw;
 }
