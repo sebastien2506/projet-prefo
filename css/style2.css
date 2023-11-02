@@ -184,6 +184,7 @@ nav > a:after {
   padding: 0 15px;
 }
 
+
 .userimg {
   /* La propriété "position: relative;" est définie pour les éléments avec la classe "userimg". */
   position: relative;
@@ -266,7 +267,7 @@ nav > a:after {
   /* La propriété "background: #fff;" définit la couleur de fond de l'élément <input> à blanc (#fff). */
   background: #fff;
   /* La propriété "padding: 5px;" ajoute un espacement intérieur de 5 pixels autour du contenu de l'élément <input>. */
-  padding: 5px;
+  padding: 15px;
   /* La propriété "height: 38px;" définit la hauteur de l'élément <input> à 38 pixels. */
   height: 38px;
   /* La propriété "border-radius: 30px;" arrondit les coins de l'élément <input>, créant un effet d'arrondi sur les bords. */
@@ -274,7 +275,7 @@ nav > a:after {
   /* La propriété "font-size: 15px;" définit la taille de la police pour le texte à l'intérieur de l'élément <input> à 15 pixels. */
   font-size: 15px;
   /* La propriété "padding-left: 40px;" ajoute un espacement intérieur de 40 pixels à gauche de l'élément <input>, créant un espace pour le contenu ou un icône à gauche de l'élément. */
-  padding-left: 40px;
+  padding-left: 50px;
 }
 
 /* Styles pour les icônes à l'intérieur de ".search_chat" */
