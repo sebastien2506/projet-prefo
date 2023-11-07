@@ -120,11 +120,11 @@ main {
   /* Sélecteur pour les éléments avec la classe "text" */
   font-size: 1.6rem;
   /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
-  width: 73vw;
+  width: 53vw;
   /* Définit la largeur à 50% de la largeur de la vue */
   margin: auto;
   /* Centre l'élément horizontalement dans son conteneur parent */
-  padding: 50px;
+  padding:65px;
   /* Ajoute un remplissage intérieur de 10 pixels */
   background-color: rgba(22, 22, 22, 0.93);
   /* Définit la couleur d'arrière-plan avec une opacité de 0.93 */
@@ -134,16 +134,12 @@ main {
   /* Ajoute une bordure d'un pixel de large de couleur noire */
   border-radius: 25px;
   /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
-  box-shadow: -5px 5px 0px 0px rgb(84, 19, 248),
-    -10px 10px 0px 0px rgba(93, 55, 216, 0.6),
-    -15px 15px 0px 0px rgba(48, 59, 169, 0.4),
-    -20px 20px 0px 0px rgba(56, 54, 159, 0.2),
-    -25px 25px 0px 0px rgba(45, 47, 141, 0.1);
+  
 }
 
 .titre {
   /* Sélecteur pour les éléments avec la classe "titre" */
-  margin: 5rem auto 0px auto;
+  margin: 10rem auto 50px auto;
   /* Centre l'élément horizontalement dans son conteneur parent et supprime la marge supérieure */
   text-align: center;
   /* Centre le texte horizontalement dans l'élément */
@@ -157,15 +153,9 @@ main {
   /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
   font-size: 1.6rem;
   /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
-  width: 15vw;
+  width: 25vw;
   /* Définit la largeur à 19% de la largeur de la vue */
-  padding: 10px;
-  /* Ajoute un remplissage intérieur de 10 pixels */
-  box-shadow: -5px 5px 0px 0px rgb(84, 19, 248),
-    -10px 10px 0px 0px rgba(93, 55, 216, 0.6),
-    -15px 15px 0px 0px rgba(48, 59, 169, 0.4),
-    -20px 20px 0px 0px rgba(56, 54, 159, 0.2),
-    -25px 25px 0px 0px rgba(45, 47, 141, 0.1);
+  padding: 30px;
 }
 
 /*--------------------------------------------(hover before)faire apparaitre des photo sur des mots text----------------------------------------------------------------*/
