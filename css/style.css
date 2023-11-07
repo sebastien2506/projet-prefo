@@ -291,9 +291,9 @@ video {
   /* Définit la couleur du texte en rouge clair */
   font-family: byl;
   /* Définit la police du texte comme "byl" */
-  font-size: 8em;
+  font-size: 7.5em;
   /* Définit la taille de la police à 5 fois la taille de la police par défaut */
-  letter-spacing: 0.5em;
+  letter-spacing: 0.3em;
   /* Ajoute un espacement de 0.2 em entre les lettres du texte */
   z-index: 2;
   display: flex;
