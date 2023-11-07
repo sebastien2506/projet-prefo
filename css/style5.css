@@ -2,19 +2,20 @@
   --green: rgb(61, 214, 88);
 }
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+  margin: 0; /* Réinitialise les marges à zéro pour tous les éléments */
+  padding: 0; /* Réinitialise les rembourrages à zéro pour tous les éléments */
+  box-sizing: border-box; /* Utilise la boîte modèle "border-box" pour tous les éléments (le contenu s'ajuste dans la taille spécifiée, y compris les bordures et les rembourrages) */
+  font-family: sans-serif; /* Définit une famille de polices génériques sans empattement pour tous les éléments */
 }
+
 body {
   background-image: url(../image\ video/time.jpg);
 }
 nav {
-  z-index: 3;
-  position: fixed;
-  width: 100%;
-  top: 0;
+  z-index: 3; /* Définit l'empilement en z-index de l'élément à 3 (au-dessus des autres éléments) */
+  position: fixed; /* Fixe la position de l'élément sur l'écran, de sorte qu'il reste visible même lorsque l'utilisateur fait défiler la page */
+  width: 100%; /* Définit la largeur de l'élément à 100% de la largeur de la fenêtre */
+  top: 0; /* Place l'élément en haut de la fenêtre, c'est-à-dire au niveau du haut de la fenêtre du navigateur */
   display: flex; /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
 
                    Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.

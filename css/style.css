@@ -17,119 +17,122 @@
 }
 
 body {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  display: flex; /* Définit le modèle d'affichage flex pour l'élément body */
+  flex-wrap: wrap; /* Permet aux éléments enfants de s'enrouler (passer à la ligne suivante) si nécessaire */
+  align-items: center; /* Centre verticalement les éléments enfants dans le conteneur flex */
+  justify-content: center; /* Centre horizontalement les éléments enfants dans le conteneur flex */
+  min-height: 100vh; /* Fixe la hauteur minimale du body à 100% de la hauteur de la fenêtre du navigateur */
 }
+
 /*--------------------------------------------------------------------------------------card rota--------------------------------------------------------------------------------*/
 .card {
-  position: relative;
-  width: 300px;
-  height: 350px;
-  margin: 50px;
-  top: -50px;
+  position: relative; /* Position relative pour permettre des positionnements internes */
+  width: 300px; /* Largeur de la carte de 300 pixels */
+  height: 350px; /* Hauteur de la carte de 350 pixels */
+  margin: 50px; /* Marge de 50 pixels autour de la carte */
+  top: -50px; /* Déplace la carte vers le haut de 50 pixels par rapport à sa position normale */
 }
 
 .card .face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: 1.9s;
+  position: absolute; /* Position absolue pour les éléments enfants de la classe .face */
+  width: 100%; /* Largeur à 100% de la largeur du parent */
+  height: 100%; /* Hauteur à 100% de la hauteur du parent */
+  backface-visibility: hidden; /* Masque la face arrière de l'élément lors de rotations (pour les effets de retournement) */
+  border-radius: 10px; /* Arrondit les coins de la carte avec un rayon de 10 pixels */
+  overflow: hidden; /* Masque tout contenu dépassant des dimensions de la carte */
+  transition: 1.9s; /* Applique une transition de 1.9 secondes pour des effets animés, comme les rotations */
 }
 
 .card .front {
-  transform: perspective(600px) rotateY(0deg);
-  box-shadow: 0 5px 10px #000;
+  transform: perspective(600px) rotateY(0deg); /* Applique une perspective et une rotation horizontale de 0 degrés */
+  box-shadow: 0 5px 10px #000; /* Ajoute une ombre sous la carte */
 }
 
 .card .front img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 3;
+  position: absolute; /* Position absolue pour l'image à l'intérieur de la face avant de la carte */
+  width: 100%; /* Largeur de l'image à 100% de la largeur de son parent */
+  height: 100%; /* Hauteur de l'image à 100% de la hauteur de son parent */
+  object-fit: cover; /* Redimensionne l'image pour couvrir tout l'espace disponible sans déformation */
+  z-index: 3; /* Définit l'empilement en z-index pour contrôler la superposition d'éléments (3 étant au-dessus des autres) */
 }
 
 .card .front h3 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 45px;
-  line-height: 45px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.4);
-  text-align: center;
+  position: absolute; /* Position absolue pour le titre à l'intérieur de la face avant de la carte */
+  bottom: 0; /* Aligne le titre en bas de la carte */
+  width: 100%; /* Largeur du titre à 100% de la largeur de son parent */
+  height: 45px; /* Hauteur du titre de 45 pixels */
+  line-height: 45px; /* Hauteur de ligne égale à la hauteur du titre pour centrer le texte verticalement */
+  color: #fff; /* Couleur du texte en blanc */
+  background: rgba(0, 0, 0, 0.4); /* Fond semi-transparent de couleur noire */
+  text-align: center; /* Centre le texte horizontalement */
 }
 
 .card .back {
-  transform: perspective(600px) rotateY(180deg);
-  background: rgb(3, 35, 54);
-  padding: 15px;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  box-shadow: 0 5px 10px #000;
-  font-size: 2em;
-  font-family: "Times New Roman", Times, serif;
+  transform: perspective(600px) rotateY(180deg); /* Applique une perspective et une rotation horizontale de 180 degrés pour la face arrière de la carte (retournement) */
+  background: rgb(3, 35, 54); /* Définit la couleur d'arrière-plan en RVB */
+  padding: 15px; /* Ajoute un espacement intérieur de 15 pixels autour du contenu de la face arrière */
+  color: #ffffff; /* Définit la couleur du texte en blanc */
+  display: flex; /* Utilise un modèle d'affichage flex pour organiser les éléments enfants */
+  flex-direction: column; /* Organise les éléments enfants en colonne */
+  justify-content: space-between; /* Répartit l'espace disponible de manière égale entre les éléments enfants */
+  text-align: center; /* Centre le texte horizontalement */
+  box-shadow: 0 5px 10px #000; /* Ajoute une ombre sous la carte */
+  font-size: 2em; /* Définit la taille de la police à 2 fois la taille de la police de base */
+  font-family: "Times New Roman", Times, serif; /* Définit la famille de police */
 }
 
 .card .back .link {
-  border-top: solid 1px #f3f3f3;
-  height: 50px;
-  line-height: 50px;
+  border-top: solid 1px #f3f3f3; /* Ajoute une bordure supérieure solide de 1 pixel de couleur f3f3f3 */
+  height: 50px; /* Définit la hauteur de l'élément .link à 50 pixels */
+  line-height: 50px; /* Hauteur de ligne égale à la hauteur de l'élément .link pour centrer le texte verticalement */
 }
 
 .card .back .link a {
-  color: #f3f3f3;
+  color: #f3f3f3; /* Définit la couleur du lien en f3f3f3 */
 }
 
 .card .back h3 {
-  font-size: 30px;
-  margin-top: 20px;
-  letter-spacing: 2px;
+  font-size: 30px; /* Définit la taille de la police à 30 pixels */
+  margin-top: 20px; /* Ajoute une marge supérieure de 20 pixels à l'élément h3 */
+  letter-spacing: 2px; /* Ajoute un espacement entre les caractères de 2 pixels */
 }
 
 .card .back p {
-  letter-spacing: 1px;
+  letter-spacing: 1px; /* Ajoute un espacement entre les caractères de 1 pixel pour les paragraphes à l'intérieur de la face arrière de la carte */
 }
 
 .card:hover .front {
-  transform: perspective(600px) rotateY(180deg);
+  transform: perspective(600px) rotateY(180deg); /* Lorsque l'utilisateur survole la carte, effectue une rotation de 180 degrés de la face avant */
 }
 
 .card:hover .back {
-  transform: perspective(600px) rotateY(360deg);
+  transform: perspective(600px) rotateY(360deg); /* Lorsque l'utilisateur survole la carte, effectue une rotation complète de 360 degrés de la face arrière, revenant à la face avant */
 }
+
 /*---------------------------------------------------------------------------------------------fin card-------------------------------------------------------------------------*/
 main {
   margin-top: 5vh;
 }
 /*------------------------------------------------------------------decran daccuil--------------------------------------------------------------------------------------------*/
 #style {
-  position: absolute;
-  background-image: url(image\ video/code1.jpg);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.07;
-  z-index: 0;
+  position: absolute; /* Position absolue pour l'élément avec l'ID "style" */
+  background-image: url(image\ video/code1.jpg); /* Définit une image d'arrière-plan pour l'élément avec l'ID "style" */
+  top: 0; /* Place l'élément en haut de la fenêtre */
+  left: 0; /* Place l'élément tout à gauche de la fenêtre */
+  width: 100%; /* Définit la largeur de l'élément à 100% de la largeur de la fenêtre */
+  height: 100vh; /* Définit la hauteur de l'élément à 100% de la hauteur de la fenêtre (viewport height, VH) */
+  background-position: center; /* Centre l'image d'arrière-plan horizontalement et verticalement */
+  background-size: cover; /* Redimensionne l'image d'arrière-plan pour couvrir tout l'espace disponible sans déformation */
+  opacity: 0.07; /* Définit l'opacité de l'élément à 0.07 (très transparent) */
+  z-index: 0; /* Définit l'empilement en z-index de l'élément à 0 (derrière les autres éléments) */
 }
+
 /*------------------------------------------------------------------------------bar navigateur------------------------------------------------------------------------------------*/
 nav {
-  z-index: 3;
-  position: fixed;
-  width: 100%;
-  top: 0;
+  z-index: 3; /* Définit l'empilement en z-index de l'élément à 3 (au-dessus des autres éléments) */
+  position: fixed; /* Fixe la position de l'élément sur l'écran, de sorte qu'il reste visible même lorsque l'utilisateur fait défiler la page */
+  width: 100%; /* Définit la largeur de l'élément à 100% de la largeur de la fenêtre */
+  top: 0; /* Place l'élément en haut de la fenêtre, c'est-à-dire au niveau du haut de la fenêtre du navigateur */
   display: flex; /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
 
                    Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
@@ -142,13 +145,12 @@ nav {
   border-bottom: 2px solid red; /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
 }
 nav img {
-  position: absolute;
-  height: 6.5vh;
-  filter: brightness(0) invert(1);
-  top: 0;
-  left: 2rem;
+  position: absolute; /* Position absolue pour les images à l'intérieur de la balise <nav> */
+  height: 6.5vh; /* Hauteur des images à 6.5% de la hauteur de la fenêtre (viewport height, VH) */
+  filter: brightness(0) invert(1); /* Applique un filtre d'image pour réduire la luminosité à 0 et inverser les couleurs (crée un effet d'image en noir et blanc inversé) */
+  top: 0; /* Place les images en haut de leur contenant */
+  left: 2rem; /* Place les images à 2 rem (unité de mesure relative) à partir de la gauche du contenant */
 }
-
 /*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
 nav > a {
   color: white;
@@ -299,7 +301,6 @@ video {
   height: 100vh;
   align-items: center;
   justify-content: center;
-  
 }
 
 #animation span {
@@ -429,55 +430,66 @@ footer {
 
 footer .social_icon,
 footer .menu {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 0;
-  cursor: pointer;
+  position: relative; /* Position relative pour les éléments à l'intérieur de la balise <footer> */
+  display: flex; /* Utilise un modèle d'affichage flex pour organiser les éléments */
+  align-items: center; /* Centre verticalement les éléments enfants */
+  justify-content: center; /* Centre horizontalement les éléments enfants */
+  margin: 10px 0; /* Ajoute une marge de 10 pixels en haut et en bas des éléments */
+  cursor: pointer; /* Change le curseur en une main pointant pour indiquer que les éléments sont cliquables */
 }
+
 footer .social_icon li,
 footer .menu li {
-  list-style: none;
-  cursor: pointer;
+  list-style: none; /* Supprime les puces de liste pour les éléments <li> */
+  cursor: pointer; /* Change le curseur en une main pointant pour indiquer que les éléments sont cliquables */
 }
+
 footer .social_icon li a {
-  font-size: 2em;
-  color: #ffffff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
+  font-size: 2em; /* Définit la taille de la police à 2 fois la taille de la police de base */
+  color: #ffffff; /* Définit la couleur du texte en blanc */
+  margin: 0 10px; /* Ajoute une marge de 0 pixels à gauche et à droite des liens */
+  display: inline-block; /* Affiche les liens en tant que blocs en ligne */
+  transition: 0.5s; /* Ajoute une transition de 0.5 seconde pour des effets animés */
 }
+
 footer .social_icon a:hover {
-  transform: translateY(-10px);
+  transform: translateY(
+    -10px
+  ); /* Lorsque l'utilisateur survole un lien social, le déplace vers le haut de 10 pixels */
 }
+
 footer .menu li {
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
-  text-decoration: none;
-  opacity: 0.75;
+  margin: 0 10px; /* Ajoute une marge de 0 pixels à gauche et à droite des éléments de menu */
+  display: inline-block; /* Affiche les éléments de menu en tant que blocs en ligne */
+  transition: 0.5s; /* Ajoute une transition de 0.5 seconde pour des effets animés */
+  text-decoration: none; /* Supprime la décoration par défaut des liens */
+  opacity: 0.75; /* Définit l'opacité à 0.75 (partiellement transparent) */
 }
+
 footer .menu a {
-  font-size: 2em;
-  color: #ff0000;
-  transition: 0.5s;
+  font-size: 2em; /* Définit la taille de la police à 2 fois la taille de la police de base */
+  color: #ff0000; /* Définit la couleur du texte en rouge (#ff0000) */
+  transition: 0.5s; /* Ajoute une transition de 0.5 seconde pour des effets animés */
 }
+
 footer .menu a:hover {
-  opacity: 1;
+  opacity: 1; /* Lorsque l'utilisateur survole un élément de menu, l'opacité passe à 1 (complètement opaque) */
 }
+
 footer p {
-  color: #ffffff;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  font-size: 1.1em;
+  color: #ffffff; /* Définit la couleur du texte en blanc */
+  text-align: center; /* Centre le texte horizontalement */
+  margin-top: 15px; /* Ajoute une marge supérieure de 15 pixels */
+  margin-bottom: 10px; /* Ajoute une marge inférieure de 10 pixels */
+  font-size: 1.1em; /* Définit la taille de la police à 1.1 fois la taille de la police de base */
 }
+
 footer p a {
-  color: #ffffff;
+  color: #ffffff; /* Définit la couleur du texte des liens dans les paragraphes en blanc */
 }
+
 footer span {
-  font-size: 2.1em;
-  color: #f3f3f3;
-  font-family: sign;
+  font-size: 2.1em; /* Définit la taille de la police à 2.1 fois la taille de la police de base */
+  color: #f3f3f3; /* Définit la couleur du texte en gris (#f3f3f3) */
+  font-family: sign; /* Utilise la police de caractères "sign" */
 }
