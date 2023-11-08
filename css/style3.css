@@ -113,18 +113,18 @@ nav > a:after {
   /* Empêche la répétition de l'arrière-plan */
 }
 main {
-  margin-top: 3vh;
+  margin-top: 5vh;
 }
 
 .text {
   /* Sélecteur pour les éléments avec la classe "text" */
   font-size: 1.6rem;
   /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
-  width: 53vw;
+  width: 73vw;
   /* Définit la largeur à 50% de la largeur de la vue */
   margin: auto;
   /* Centre l'élément horizontalement dans son conteneur parent */
-  padding:65px;
+  padding: 45px;
   /* Ajoute un remplissage intérieur de 10 pixels */
   background-color: rgba(22, 22, 22, 0.93);
   /* Définit la couleur d'arrière-plan avec une opacité de 0.93 */
@@ -134,12 +134,11 @@ main {
   /* Ajoute une bordure d'un pixel de large de couleur noire */
   border-radius: 25px;
   /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
-  
 }
 
 .titre {
   /* Sélecteur pour les éléments avec la classe "titre" */
-  margin: 10rem auto 50px auto;
+  margin: 8rem auto 50px auto;
   /* Centre l'élément horizontalement dans son conteneur parent et supprime la marge supérieure */
   text-align: center;
   /* Centre le texte horizontalement dans l'élément */
