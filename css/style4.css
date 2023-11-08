@@ -100,6 +100,21 @@ h5 {
   font-size: 50px; /* Définit la taille de la police à 50 pixels */
   text-align: center; /* Centre le texte horizontalement */
 }
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Met la vidéo en arrière-plan */
+  overflow: hidden;
+}
+
+#video-container video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
 #image-track {
   display: flex; /* Utilise un modèle d'affichage flex pour organiser les éléments enfants */
@@ -115,10 +130,11 @@ h5 {
 }
 
 #image-track > .image {
-  width: 45vmin; /* Définit la largeur des éléments avec la classe "image" à 45vmin */
-  height: 56vmin; /* Définit la hauteur des éléments avec la classe "image" à 56vmin */
+  width: 55vmin; /* Définit la largeur des éléments avec la classe "image" à 45vmin */
+  height: 70vmin; /* Définit la hauteur des éléments avec la classe "image" à 56vmin */
   object-fit: cover; /* Redimensionne les images pour couvrir tout l'espace disponible sans déformation */
   object-position: 100% center; /* Positionne l'image à 100% à droite et au centre */
+  border-radius: 25px;
 }
 
 /* Styles pour les liens YouTube */
