@@ -468,8 +468,9 @@ footer .menu li {
 
 footer .menu a {
   font-size: 2em; /* Définit la taille de la police à 2 fois la taille de la police de base */
-  color: #ff0000; /* Définit la couleur du texte en rouge (#ff0000) */
+  color: #fdfcfc; /* Définit la couleur du texte en rouge (#ff0000) */
   transition: 0.5s; /* Ajoute une transition de 0.5 seconde pour des effets animés */
+  font-family: serif;
 }
 
 footer .menu a:hover {

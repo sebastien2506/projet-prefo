@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "milk";
+  src: url(../fond/milk.otf);
+}
 :root {
   --green: rgb(61, 214, 88);
 }
@@ -5,7 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica;
 }
 nav {
   position: fixed;
@@ -26,6 +30,7 @@ nav {
   /*couleur de fond d'ecran */
   border-bottom: 2px solid rgb(0, 4, 244);
   /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
+  font-family: "milk", sans-serif;
 }
 
 /*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
@@ -111,6 +116,7 @@ nav > a:after {
   /* Positionne l'arrière-plan au centre de l'élément avec un décalage vertical de 7% de la hauteur de la vue */
   background-repeat: no-repeat;
   /* Empêche la répétition de l'arrière-plan */
+  font-family: "milk", sans-serif;
 }
 main {
   margin-top: 5vh;
