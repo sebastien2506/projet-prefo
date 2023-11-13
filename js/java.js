@@ -2,10 +2,22 @@ const track = document.getElementById("image-track");
 
 const handleOnDown = (e) => (track.dataset.mouseDownAt = e.clientX);
 
-const handleOnUp = () => {
+function handleOnUp() {
   track.dataset.mouseDownAt = "0";
   track.dataset.prevPercentage = track.dataset.percentage;
-};
+}
+
+document.addEventListener("wheel", function (event) {
+  // Get the distance that the mouse wheel was rotated
+  const delta = event.deltaY;
+
+  // Check the value of delta
+  if (delta > 0) {
+    // The wheel was rotated upwards or away from the user
+  } else if (delta < 0) {
+    // The wheel was rotated downwards or towards the user
+  }
+});
 
 const handleOnMove = (e) => {
   if (track.dataset.mouseDownAt === "0") return;

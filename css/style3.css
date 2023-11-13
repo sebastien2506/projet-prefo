@@ -22,7 +22,7 @@ nav {
    Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
   justify-content: end;
   /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
-  padding-right: 60px;
+  padding-right: 20px;
   /*La propriété padding-right d'un élément correspond à l'espace nécessaire à la droite d'un élément. La zone de remplissage correspond à l'espace entre le contenu et la bordure. padding-right ne peut pas recevoir de valeurs négatives.*/
   height: 7vh;
   /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
@@ -37,7 +37,7 @@ nav {
 nav > a {
   color: rgb(255, 255, 255);
   padding-top: 2vh;
-  margin: 0px 10px 0px 40px;
+  margin: 0px 10px 0px 20px;
   font-size: 1.6rem;
   /*La propriété font-size définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type <length>) (par exemple exprimées avec les unités em ou ex).*/
   font-weight: bold;
